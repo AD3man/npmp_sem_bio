@@ -15,3 +15,6 @@
     aplituda, perioda, usklajenost(sinh) glede na spremenljivko (difuzija, gostota, veliksot prostora)
 
 dodatno: Razporejenost celic je edina, ki je random, zato jo prizemljimo na 1 razporeditev
+
+### Možni problemi
+* pri majhnih gostotah populacije je problem, da se mora upoštevati tudi čas potovanja "proteina", kar pomeni da lahko celice na veliki razdalji sinhronizirano oscilirajo, vendar z časovnim razmikom
