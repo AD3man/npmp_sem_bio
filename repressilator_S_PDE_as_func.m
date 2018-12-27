@@ -1,15 +1,22 @@
-function  [A_full, TT, stdDeviacijaKoncentracije] = repressilator_S_PDE_as_func(iteracija,plotsNoPlots)
+function  [A_full, TT, stdDeviacijaKoncentracije] = repressilator_S_PDE_as_func(naloziCelice,shraniCelice)
     % ali rob predstavlja konec prostora ali so meje neskonène?
     periodic_bounds = 1;
     % nalaganje shranjene konfiguracije?
     load_conf = 0;
     % shranjevanje konène konfiguracije?
-    save_conf = 1;
+    save_conf = 0;
     % fiksni robovi ali spremenljivi
     borderfixed = 0;
     % snemanje videa - èasovno potratno
     movie_on = 0;
-
+    % Naloži pozicijo celic 0 = false, 1 = true? 
+    nalozi_celice = naloziCelice
+    % Shrani pozicijo celic, èe je nalozi_celice = 0 oz èe shranitvene datoteke ni.
+    shrani_celice = shraniCelice
+    
+    
+    
+    
     % nalaganje vrednosti parametrov
     p = load('params.mat');
     alpha = p.alpha;
@@ -48,21 +55,37 @@ function  [A_full, TT, stdDeviacijaKoncentracije] = repressilator_S_PDE_as_func(
     mB = zeros(size,size);
     mC = zeros(size,size);
 
-
-    CELLS = zeros(size,size);
-    cell_idx = zeros(1,n_cells);
-    for i = 1:n_cells
-        idx = randi(size^2);
-        while CELLS(idx) == 1
+    
+    CELLS = [];
+    cell_idx = [];
+    
+    if (nalozi_celice && isfile('pozicija_celic.mat'))
+        tmp_cel = load('pozicija_celic.mat');
+        CELLS = tmp_cel.CELLS;
+        cell_idx = tmp_cel.cell_idx;
+        fprintf('Celice nalozene');
+    else
+        CELLS = zeros(size,size);
+        cell_idx = zeros(1,n_cells);
+        for i = 1:n_cells
             idx = randi(size^2);
-        end;
-        CELLS(idx) = 1;
-        cell_idx(i) = idx;
-    end;
-
-
-    cell_idx = sort(cell_idx);
-
+            while CELLS(idx) == 1
+                idx = randi(size^2);
+            end
+            CELLS(idx) = 1;
+            cell_idx(i) = idx;
+        end
+        cell_idx = sort(cell_idx);
+        fprintf('Pozicije celic generirane\n');
+        if(shrani_celice)
+            % Za shranjevenje neke pozicije celic
+            save('pozicija_celic.mat','cell_idx', 'CELLS');
+            fprintf('Pozicije celic so shranjene \n');
+        end
+    end
+    
+   
+    
     %cell_idx = ceil(size^2 * rand(1, n_cells));
     %CELLS = zeros(size,size);
     %CELLS(cell_idx) = 1;
