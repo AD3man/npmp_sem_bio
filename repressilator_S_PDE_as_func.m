@@ -1,17 +1,17 @@
 function  [A_full, TT, stdDeviacijaKoncentracije] = repressilator_S_PDE_as_func(naloziCelice,shraniCelice)
-    % ali rob predstavlja konec prostora ali so meje neskonène?
+    % ali rob predstavlja konec prostora ali so meje neskonï¿½ne?
     periodic_bounds = 1;
     % nalaganje shranjene konfiguracije?
     load_conf = 0;
-    % shranjevanje konène konfiguracije?
+    % shranjevanje konï¿½ne konfiguracije?
     save_conf = 0;
     % fiksni robovi ali spremenljivi
     borderfixed = 0;
-    % snemanje videa - èasovno potratno
+    % snemanje videa - ï¿½asovno potratno
     movie_on = 0;
-    % Naloži pozicijo celic 0 = false, 1 = true? 
+    % Naloï¿½i pozicijo celic 0 = false, 1 = true? 
     nalozi_celice = naloziCelice;
-    % Shrani pozicijo celic, èe je nalozi_celice = 0 oz èe shranitvene datoteke ni.
+    % Shrani pozicijo celic, ï¿½e je nalozi_celice = 0 oz ï¿½e shranitvene datoteke ni.
     shrani_celice = shraniCelice;
     
     
@@ -63,7 +63,7 @@ function  [A_full, TT, stdDeviacijaKoncentracije] = repressilator_S_PDE_as_func(
         tmp_cel = load('pozicija_celic.mat');
         CELLS = tmp_cel.CELLS;
         cell_idx = tmp_cel.cell_idx;
-        fprintf('Celice nalozene');
+        fprintf('Celice nalozene\n');
     else
         CELLS = zeros(size,size);
         cell_idx = zeros(1,n_cells);
@@ -265,11 +265,11 @@ function  [A_full, TT, stdDeviacijaKoncentracije] = repressilator_S_PDE_as_func(
     %%%
 
 
-    %pos = (0 : size-1)*h;
-    %hm = HeatMap(CELLS, 'RowLabels', pos, 'ColumnLabels', pos);
-    %addXLabel(hm, '\mu m');
-    %addYLabel(hm, '\mu m');
-    %hold off
+    pos = (0 : size-1)*h;
+    hm = HeatMap(CELLS, 'RowLabels', pos, 'ColumnLabels', pos);
+    addXLabel(hm, '\mu m');
+    addYLabel(hm, '\mu m');
+    hold off
 
 
 
