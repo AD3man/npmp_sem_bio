@@ -34,4 +34,9 @@ h2=h^2;
 
 save('params')
 
+%Test za getOscilationArea, ki izracuna od katerega indeksa naprej
+%posamezna celica oscilira
+%[A_full, TT, stdDeviacijaKoncentracije]= repressilator_S_PDE_as_func(0,0);
+%ret= getOscilationArea(A_full(:,1), 1)
+
 %repressilator_PDE

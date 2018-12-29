@@ -10,9 +10,9 @@ function  [A_full, TT, stdDeviacijaKoncentracije] = repressilator_S_PDE_as_func(
     % snemanje videa - èasovno potratno
     movie_on = 0;
     % Naloži pozicijo celic 0 = false, 1 = true? 
-    nalozi_celice = naloziCelice
+    nalozi_celice = naloziCelice;
     % Shrani pozicijo celic, èe je nalozi_celice = 0 oz èe shranitvene datoteke ni.
-    shrani_celice = shraniCelice
+    shrani_celice = shraniCelice;
     
     
     
