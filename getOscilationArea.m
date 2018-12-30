@@ -1,6 +1,9 @@
 %PAR1 Vektor samplov za eno celico 1D vektor
 %PAR2 Odstopanje pri iskanju peak-ov
-%start_oscilacije  Indeks vzorca od katerega naprej celica oscilira
+
+% vrne:
+% start_oscilacije - Indeks vzorca od katerega naprej celica oscilira
+% 
 
 function [start_oscilacije] = getOscilationArea(DATA_RAW, epsilon, debug_bool)
     zanimivoPodrocje=length(DATA_RAW)/2:length(DATA_RAW);
@@ -86,8 +89,11 @@ function [start_oscilacije] = getOscilationArea(DATA_RAW, epsilon, debug_bool)
         %plot(length(DATA)/2:length(DATA),DATA(length(DATA)/2:length(DATA)),'b',TT(doline_idx),doline_val,'r*', TT(peaks_idx),peaks_val,'g*', TT(peaks_idx(current)), DATA(peaks_idx(current)), 'y*'); 
     end
     
-    %Vrni index zacetka oscilacije. Ker dobimo index prvega ki je izven
+    %Vrni index zacetka oscilacije. Ker dobimo index zadnjega ki je vrèji od
     %epsilon, indexu dodamo 1
-    start_oscilacije= predOscilacijo+1 + length(DATA_RAW)/2;  % Dodamo še polovico dolžine.
+    start_oscilacije= peaks_idx(predOscilacijo+1) + length(DATA_RAW)/2;  % Dodamo še polovico dolžine.
+    
+    %doline = {dol}
+    
 end
 
