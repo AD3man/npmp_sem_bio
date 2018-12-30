@@ -47,29 +47,39 @@ save('params')
 clear;
 %Test za getOscilationArea, ki izracuna od katerega indeksa naprej
 %posamezna celica oscilira
-[A_full, TT, stdDeviacijaKoncentracije]= repressilator_S_PDE_as_func(1,1);
+[A_full, TT]= repressilator_S_PDE_as_func(1,1);
 % A_full - rezultati simulacije
 % TT - ƒçasovni koraki
 stcelic = size(A_full,2)
 zacetkiOSCvec = zeros(stcelic,1); % razultati za zaËetke osciliranja
+povpAplitudOSCvec = zeros(stcelic,1); % razultati za povpreËje amplitud obmoËij osciliranja
+povpPeriodOSCvec = zeros(stcelic,1); % razultati za povpreËje period obmoËij osciliranja
 
 for i=1:stcelic
-  [start_oscilacije]= getOscilationArea(A_full(:,i), 0.2,i==10);  %debug poûene samo pri 10. indexu
+  [start_oscilacije,  povprecje_amplitud_oos, povprecje_period_oos ]= getOscilationArea(A_full(:,i), 0.2,i==10);  %debug poûene samo pri 10. indexu
   zacetkiOSCvec(i)=start_oscilacije;
+  povpAplitudOSCvec(i)=povprecje_amplitud_oos;
+  povpPeriodOSCvec(i)=povprecje_period_oos;
 end
-zacetkiOSCvec = zacetkiOSCvec
+rezultat =  [ zacetkiOSCvec povpAplitudOSCvec povpPeriodOSCvec ]
 
+% pridobimo öe popreËja za vse celice:
+rezultat_povpreceno_cez_vse_celice =  [ mean(zacetkiOSCvec) mean(povpAplitudOSCvec) mean(povpPeriodOSCvec) ]
+disp(sprintf('%f, ',rezultat_povpreceno_cez_vse_celice))
 
-% Od tu naprej imamo obmoƒçje simulacije vseh celic
+rezultati_hash = containers.Map();  
 
-% pridobi povpreƒçno vrednost amplitude oscilacij vseh celic
+if(isfile('rezultati_map.mat'))
+    rezultati_hash_tmp=load('rezultati_map.mat');
+    rezultati_hash=rezultati_hash_tmp.rezultati_hash;
+end 
+tmp_params =  load('params.mat');
 
-% pridobi povpreƒçno vrednost periode oscilacij vseh celic 
+key = sprintf('%.2f-%.2f-%.2f',tmp_params.size, tmp_params.density, tmp_params.D1)
 
-% pridobi povpreƒçno usklajenost oscilacij vseh celic (koncentracija molekule C v celici je v vseh celicah ob nekem ƒçasu zelo podobna)
-
-
-
-
-
-%repressilator_PDE
+disp(key)
+rezultati_hash(key)= rezultat_povpreceno_cez_vse_celice;
+save('rezultati_map.mat','rezultati_hash');
+clear rezultati_hash;
+clear tmp_params;
+% todo

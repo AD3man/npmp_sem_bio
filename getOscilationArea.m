@@ -3,9 +3,10 @@
 
 % vrne:
 % start_oscilacije - Indeks vzorca od katerega naprej celica oscilira
-% 
+% povprecje_amplitud_oos - povrecje amplitud od indexa oscilacije naprej
+% povprecje_period_oos - povprecje period vrhov od indexa oscilacije naprej
 
-function [start_oscilacije] = getOscilationArea(DATA_RAW, epsilon, debug_bool)
+function [start_oscilacije, povprecje_amplitud_oos, povprecje_period_oos] = getOscilationArea(DATA_RAW, epsilon, debug_bool)
     zanimivoPodrocje=length(DATA_RAW)/2:length(DATA_RAW);
     DATA=DATA_RAW(zanimivoPodrocje);
     %Odstrani prvo polovico rezultastov in najdi peake
@@ -59,7 +60,7 @@ function [start_oscilacije] = getOscilationArea(DATA_RAW, epsilon, debug_bool)
     predOscilacijoArr = find(razlResBool,1,'last'); % išèem zadnji element bool arraya, ki je še 1
     predOscilacijo = 0; % èe sluèajno oscilira že v prvi polovici osciliranja
     if(debug_bool == 1)
-        [razlRes razlResBool] 
+       rezultati_iskanja_osc_obmocja= [razlRes razlResBool] 
     end
     if(length(predOscilacijoArr) > 0) 
         predOscilacijo = predOscilacijoArr(1);
@@ -84,6 +85,7 @@ function [start_oscilacije] = getOscilationArea(DATA_RAW, epsilon, debug_bool)
         plot(TT(doline_idx),doline_val,'r*','DisplayName','Lokalni minimumi'); 
         plot(TT(peaks_idx),peaks_val,'g*','DisplayName','Lokalni maksimumi'); 
         plot(TT(peaks_idx(predOscilacijo+1)), DATA(peaks_idx(predOscilacijo+1)), 'y*','DisplayName','Zaèetek oscilacije'); 
+        plot(TT(doline_idx(predOscilacijo+1)), DATA(doline_idx(predOscilacijo+1)), 'y*','DisplayName','Zaèetek oscilacije'); 
         legend;
         hold off;
         %plot(length(DATA)/2:length(DATA),DATA(length(DATA)/2:length(DATA)),'b',TT(doline_idx),doline_val,'r*', TT(peaks_idx),peaks_val,'g*', TT(peaks_idx(current)), DATA(peaks_idx(current)), 'y*'); 
@@ -93,7 +95,16 @@ function [start_oscilacije] = getOscilationArea(DATA_RAW, epsilon, debug_bool)
     %epsilon, indexu dodamo 1
     start_oscilacije= peaks_idx(predOscilacijo+1) + length(DATA_RAW)/2;  % Dodamo še polovico dolžine.
     
-    %doline = {dol}
+    peaksOscilacijeCasovniKoraki = peaks_idx(predOscilacijo+1:end);
+    peaksOscilacijeCasovniKorakiShifted = peaksOscilacijeCasovniKoraki(2:end);
+    periode= peaksOscilacijeCasovniKorakiShifted - peaksOscilacijeCasovniKoraki(1:length(peaksOscilacijeCasovniKorakiShifted));
     
+    amplitude_abs_obmOsc= abs(DATA(peaks_idx(predOscilacijo+1)) - DATA(doline_idx(predOscilacijo+1)));
+    
+    povprecje_amplitud_oos = mean(amplitude_abs_obmOsc);
+    povprecje_period_oos = mean(mean(periode));
+    if(debug_bool == 1)
+        povprecje_amplitud_period=[povprecje_amplitud_oos, povprecje_period_oos]
+    end
 end
 

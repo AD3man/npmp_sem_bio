@@ -1,4 +1,4 @@
-function  [A_full, TT, stdDeviacijaKoncentracije] = repressilator_S_PDE_as_func(naloziCelice,shraniCelice)
+function  [A_full, TT] = repressilator_S_PDE_as_func(naloziCelice,shraniCelice)
     % ali rob predstavlja konec prostora ali so meje neskon�ne?
     periodic_bounds = 1;
     % nalaganje shranjene konfiguracije?
