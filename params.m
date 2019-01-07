@@ -83,3 +83,10 @@ save('rezultati_map.mat','rezultati_hash');
 clear rezultati_hash;
 clear tmp_params;
 % todo
+
+% z ga (genetic algorithm) oz podobnim za vse parametre poiskati najveèjo
+% amplitudo (npr 100 molov) z najmanjšo periodo
+% èe imamo cajt še z lokalnimi minimumi poišèemo najbolj oddaljene
+% parametre, katerih rezultat še oscilira
+
+% usklajenosti ni potrebno primerjati
