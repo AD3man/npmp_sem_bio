@@ -1,4 +1,4 @@
-function  [A_full, TT] = repressilator_S_PDE_as_func(naloziCelice,shraniCelice)
+function  [A_full, TT] = repressilator_S_PDE_as_func(naloziCelice,shraniCelice, p)
     % ali rob predstavlja konec prostora ali so meje neskon�ne?
     periodic_bounds = 1;
     % nalaganje shranjene konfiguracije?
@@ -18,7 +18,7 @@ function  [A_full, TT] = repressilator_S_PDE_as_func(naloziCelice,shraniCelice)
     
     
     % nalaganje vrednosti parametrov
-    p = load('params.mat');
+    %p = load('params.mat');
     alpha = p.alpha;
     alpha0 = p.alpha0;
     Kd = p.Kd;
@@ -33,9 +33,9 @@ function  [A_full, TT] = repressilator_S_PDE_as_func(naloziCelice,shraniCelice)
     D1 = p.D1;
     eta = p.eta;
 
-    size = p.size;                               
+    size_polje = p.size_polje;                               
     density = p.density;
-    n_cells = ceil(density * size^2);
+    n_cells = ceil(density * size_polje^2);
 
     t_end = p.t_end;
     dt = p.dt;
@@ -44,21 +44,21 @@ function  [A_full, TT] = repressilator_S_PDE_as_func(naloziCelice,shraniCelice)
 
     %koncentracije proteinov
     %S=zeros(size,size);                    % Initialise species S
-    S_e = rand(size,size);
-    S_i = zeros(size,size);
-    A = zeros(size,size);
-    B = zeros(size,size);
-    C = zeros(size,size);
+    S_e = rand(size_polje,size_polje);
+    S_i = zeros(size_polje,size_polje);
+    A = zeros(size_polje,size_polje);
+    B = zeros(size_polje,size_polje);
+    C = zeros(size_polje,size_polje);
 
     % koncentracije molekul mRNA
-    mA = zeros(size,size);  %
-    mB = zeros(size,size);
-    mC = zeros(size,size);
+    mA = zeros(size_polje,size_polje);  %
+    mB = zeros(size_polje,size_polje);
+    mC = zeros(size_polje,size_polje);
 
     
     CELLS = [];
     cell_idx = [];
-    poz_cel_filename = sprintf('cellPos/pozicija_celic_%d.mat', n_cells);
+    poz_cel_filename = sprintf('cellPos/pozicija_celic_%d_%d.mat', size_polje, n_cells);
 
     if (nalozi_celice && isfile(poz_cel_filename))
         tmp_cel = load(poz_cel_filename);
@@ -66,12 +66,12 @@ function  [A_full, TT] = repressilator_S_PDE_as_func(naloziCelice,shraniCelice)
         cell_idx = tmp_cel.cell_idx;
         fprintf('Celice nalozene\n');
     else
-        CELLS = zeros(size,size);
+        CELLS = zeros(size_polje,size_polje);
         cell_idx = zeros(1,n_cells);
         for i = 1:n_cells
-            idx = randi(size^2);
+            idx = randi(size_polje^2);
             while CELLS(idx) == 1
-                idx = randi(size^2);
+                idx = randi(size_polje^2);
             end
             CELLS(idx) = 1;
             cell_idx(i) = idx;
@@ -80,7 +80,7 @@ function  [A_full, TT] = repressilator_S_PDE_as_func(naloziCelice,shraniCelice)
         fprintf('Pozicije celic generirane\n');
         if(shrani_celice)
             % Za shranjevenje neke pozicije celic
-            save(poz_cel_filename,'cell_idx', 'CELLS');
+            save(poz_cel_filename,'cell_idx', 'CELLS', '-v7.3' );
             fprintf('Pozicije celic so shranjene \n');
         end
     end
@@ -265,13 +265,13 @@ function  [A_full, TT] = repressilator_S_PDE_as_func(naloziCelice,shraniCelice)
   
     %%%
 
-
-    pos = (0 : size-1)*h;
+    %{
+    pos = (0 : size_polje-1)*h;
     hm = HeatMap(CELLS, 'RowLabels', pos, 'ColumnLabels', pos);
     addXLabel(hm, '\mu m');
     addYLabel(hm, '\mu m');
     hold off
-
+    %}
 
 
 end
