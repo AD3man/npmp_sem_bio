@@ -58,9 +58,10 @@ function  [A_full, TT] = repressilator_S_PDE_as_func(naloziCelice,shraniCelice)
     
     CELLS = [];
     cell_idx = [];
-    
-    if (nalozi_celice && isfile('pozicija_celic.mat'))
-        tmp_cel = load('pozicija_celic.mat');
+    poz_cel_filename = sprintf('cellPos/pozicija_celic_%d.mat', n_cells);
+
+    if (nalozi_celice && isfile(poz_cel_filename))
+        tmp_cel = load(poz_cel_filename);
         CELLS = tmp_cel.CELLS;
         cell_idx = tmp_cel.cell_idx;
         fprintf('Celice nalozene\n');
@@ -79,7 +80,7 @@ function  [A_full, TT] = repressilator_S_PDE_as_func(naloziCelice,shraniCelice)
         fprintf('Pozicije celic generirane\n');
         if(shrani_celice)
             % Za shranjevenje neke pozicije celic
-            save('pozicija_celic.mat','cell_idx', 'CELLS');
+            save(poz_cel_filename,'cell_idx', 'CELLS');
             fprintf('Pozicije celic so shranjene \n');
         end
     end

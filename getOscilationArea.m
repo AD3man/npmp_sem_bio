@@ -102,7 +102,7 @@ function [start_oscilacije, povprecje_amplitud_oos, povprecje_period_oos] = getO
     amplitude_abs_obmOsc= abs(DATA(peaks_idx(predOscilacijo+1)) - DATA(doline_idx(predOscilacijo+1)));
     
     povprecje_amplitud_oos = mean(amplitude_abs_obmOsc);
-    povprecje_period_oos = mean(mean(periode));
+    povprecje_period_oos = mean((periode));
     if(debug_bool == 1)
         povprecje_amplitud_period=[povprecje_amplitud_oos, povprecje_period_oos]
     end
