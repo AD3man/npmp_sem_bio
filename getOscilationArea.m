@@ -12,11 +12,15 @@ function [start_oscilacije, povprecje_amplitud_oos, povprecje_period_oos] = getO
     %Odstrani prvo polovico rezultastov in najdi peake
     %[peaks_val, peaks_idx]= findpeaks( DATA(1:sizeD(1)/2) );
     %Najdi peake
-    [peaks_val, peaks_idx]= findpeaks( DATA );
+    [peaks_val, peaks_idx]= findpeaks( DATA )
     
     % Najdi doline (lokalne minimume)
     [doline_val, doline_idx]= najdidoline(DATA,0);
-    
+    if( length(peaks_val) <= 0 || length(doline_val) <= 0)
+        start_oscilacije = length(DATA_RAW);
+        povprecje_amplitud_oos = 0;
+        povprecje_period_oos = length(DATA_RAW);
+    end
      minlen = min(length(peaks_idx), length(doline_idx));
    
      peaks_val=peaks_val(1:minlen);

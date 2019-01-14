@@ -6,6 +6,9 @@ clear;
 % Koeficiente pred x dam v matriko A,
 % desno stran pa v  matriko b. Odvisna sta si po srolpcih A in vrsticah b
 A = [-1; 1];
-b = [1, 3];
-[x,fval,exitflag,output,population,scores] = ga(@testga,1,[],[],[],[],-1,1,[], 1);
+b = [1, 5];
+
+options = optimoptions('ga','MaxGenerations',5)
+
+[x,fval,exitflag,output,population,scores] = ga(@params_as_func,1,[],[],[],[],1,5,[], 1,options);
 
