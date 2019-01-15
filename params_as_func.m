@@ -1,15 +1,18 @@
-function y = params_as_func(alpha)
+function y = params_as_func(par, perorampl)
+    % y - povpreËna perioda ali negirana povpreËna amplituda
+
+
     % repressilator parameters
     %alpha = 216;
     %alpha0 = 0.001 * alpha;
     %n = 2;
     %beta = 5; 
-    fprintf('Testiram: %f\n', alpha);
+    fprintf('Testiram: alpha %f beta %f \n', par(1),par(2));
     tic;
     p={};
-    p.alpha = alpha; % min**(-1)              maksimalna hitrost transkripcije
+    p.alpha = par(1); % min**(-1)              maksimalna hitrost transkripcije
     p.alpha0 = 0.001 * p.alpha; % min**(-1) hitrost puÔøΩÔøΩanja represiranega promotorja
-    p.beta = 1; % min**(-1)        hitrost transkripcije
+    p.beta = par(2); %1; % min**(-1)        hitrost transkripcije
     p.Kd = 10; % nM                disociacijska konstanta
     p.delta_p = 0.1;   % min**(-1) hitrost razgradnje proteina
     p.delta_m = 0.1;   % min**(-1) hitrost razgradnje mRNA
@@ -80,13 +83,13 @@ function y = params_as_func(alpha)
 
     % A_full - rezultati simulacije
     % TT - ƒçasovni koraki
-    stcelic = size(A_full,2)
+    stcelic = size(A_full,2);
     zacetkiOSCvec = zeros(stcelic,1); % razultati za zaËetke osciliranja
     povpAplitudOSCvec = zeros(stcelic,1); % razultati za povpreËje amplitud obmoËij osciliranja
     povpPeriodOSCvec = zeros(stcelic,1); % razultati za povpreËje period obmoËij osciliranja
 
     for i=1:stcelic
-      [start_oscilacije,  povprecje_amplitud_oos, povprecje_period_oos ]= getOscilationArea(A_full(:,i), 0.2,i==10);  %debug poûene samo pri 10. indexu
+      [start_oscilacije,  povprecje_amplitud_oos, povprecje_period_oos ]= getOscilationArea(A_full(:,i), 0.2,0);  %debug poûene samo pri 10. indexu
       zacetkiOSCvec(i)=start_oscilacije;
       povpAplitudOSCvec(i)=povprecje_amplitud_oos;
       povpPeriodOSCvec(i)=povprecje_period_oos;
@@ -97,10 +100,16 @@ function y = params_as_func(alpha)
 
     % pridobimo öe popreËja za vse celice:
     rezultat_povpreceno_cez_vse_celice =  [ mean(zacetkiOSCvec) mean(povpAplitudOSCvec) mean(povpPeriodOSCvec) ];
+    if(perorampl == 0)
+        %vrnem periodo
+        y = -rezultat_povpreceno_cez_vse_celice(3);
+    else
+        % vrnem negirano amplitudo
+        y = -rezultat_povpreceno_cez_vse_celice(2);
+    end
     
-    y = rezultat_povpreceno_cez_vse_celice(3);
     
-    disp(sprintf('%f, ',rezultat_povpreceno_cez_vse_celice))
+    %disp(sprintf('%f, ',rezultat_povpreceno_cez_vse_celice))
     %{
     rezultati_hash = containers.Map();  
 
