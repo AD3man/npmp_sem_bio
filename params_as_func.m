@@ -7,16 +7,16 @@ function y = params_as_func(par, perorampl)
     %alpha0 = 0.001 * alpha;
     %n = 2;
     %beta = 5; 
-    fprintf('Testiram: alpha %f beta %f \n', par(1),par(2));
+    fprintf('Testiram: alpha: %f   beta: %f   kd: %f   n: %f\n', par(1),par(2), par(3), par(4));
     tic;
     p={};
     p.alpha = par(1); % min**(-1)              maksimalna hitrost transkripcije
     p.alpha0 = 0.001 * p.alpha; % min**(-1) hitrost pu��anja represiranega promotorja
     p.beta = par(2); %1; % min**(-1)        hitrost transkripcije
-    p.Kd = 10; % nM                disociacijska konstanta
+    p.Kd = par(3); % nM                disociacijska konstanta
     p.delta_p = 0.1;   % min**(-1) hitrost razgradnje proteina
     p.delta_m = 0.1;   % min**(-1) hitrost razgradnje mRNA
-    p.n = 2;                      % hillov koeficient
+    p.n = par(4);                      % hillov koeficient
 
     p.kappa = 0.2;  % hitrost transkripcije proteina C s strani  dodatnega gena ki ga aktivira sinhr. molekula S
     p.kS0 = 1; % hitrost razgradnje molekule S znotraj celice
