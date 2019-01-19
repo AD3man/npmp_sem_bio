@@ -1,5 +1,5 @@
 function y = params_as_func(par, perorampl, size_p, density)
-    % y - povpreËna perioda ali negirana povpreËna amplituda
+    % y - povpre?na perioda ali negirana povpre?na amplituda
 
 
     % repressilator parameters
@@ -11,7 +11,7 @@ function y = params_as_func(par, perorampl, size_p, density)
     tic;
     p={};
     p.alpha = par(1); % min**(-1)              maksimalna hitrost transkripcije
-    p.alpha0 = 0.001 * p.alpha; % min**(-1) hitrost puÔøΩÔøΩanja represiranega promotorja
+    p.alpha0 = 0.001 * p.alpha; % min**(-1) hitrost pu??????anja represiranega promotorja
     p.beta = par(2); %1; % min**(-1)        hitrost transkripcije
     p.Kd = par(3); % nM                disociacijska konstanta
     p.delta_p = 0.1;   % min**(-1) hitrost razgradnje proteina
@@ -22,7 +22,7 @@ function y = params_as_func(par, perorampl, size_p, density)
     p.kS0 = 1; % hitrost razgradnje molekule S znotraj celice
     p.kS1 = 0.01; % hitrost tvorbe molekule S, ki jo inducira protein A
     p.kSe = 0.01; % hitrost razgradnje molekule S izven celice
-    p.eta = 2;  % ta ÔøΩund n, hitrost prehajanja sinhr. celice skozi celiÔøΩno membrano
+    p.eta = 2;  % ta ???und n, hitrost prehajanja sinhr. celice skozi celi???no membrano
 
     % diffusion rate molekule S skozi prostor
     p.D1=0.5;
@@ -40,15 +40,15 @@ function y = params_as_func(par, perorampl, size_p, density)
 
     save('params')
 
-    % An≈æe:
-    % Za prihodnost: Potrebno bo pridobiti podatke za razliƒçne vrednosti parametrov,
+    % An??e:
+    % Za prihodnost: Potrebno bo pridobiti podatke za razli??ne vrednosti parametrov,
     % zato bo potrebna neka zanjka, ki gre skozi vse vrednosti parametrov
-    % Mo≈°kon je sicer svetoval, da naredimo nekak≈°no hevristiko (genetski algoritem ali kaj drugega (jes osebno ne znam))
+    % Mo??kon je sicer svetoval, da naredimo nekak??no hevristiko (genetski algoritem ali kaj drugega (jes osebno ne znam))
 
     % podatki ki jih potrebujemo:
-    %   - povpreƒçna amplituda celic ko oscilirajo glede na parametre - graf
-    %   - povpreƒçna perioda celic ko oscilirajo glede na parametre - graf
-    %   - povpreƒçna usklajenost celic ko oscilirajo glede na parametre - graf
+    %   - povpre??na amplituda celic ko oscilirajo glede na parametre - graf
+    %   - povpre??na perioda celic ko oscilirajo glede na parametre - graf
+    %   - povpre??na usklajenost celic ko oscilirajo glede na parametre - graf
 
     %{
     current_afull_key=sprintf('%d',size_polje);
@@ -82,14 +82,14 @@ function y = params_as_func(par, perorampl, size_p, density)
     [A_full, TT]= repressilator_S_PDE_as_func(1,1,p);
 
     % A_full - rezultati simulacije
-    % TT - ƒçasovni koraki
+    % TT - ??asovni koraki
     stcelic = size(A_full,2);
-    zacetkiOSCvec = zeros(stcelic,1); % razultati za zaËetke osciliranja
-    povpAplitudOSCvec = zeros(stcelic,1); % razultati za povpreËje amplitud obmoËij osciliranja
-    povpPeriodOSCvec = zeros(stcelic,1); % razultati za povpreËje period obmoËij osciliranja
+    zacetkiOSCvec = zeros(stcelic,1); % razultati za za?etke osciliranja
+    povpAplitudOSCvec = zeros(stcelic,1); % razultati za povpre?je amplitud obmo?ij osciliranja
+    povpPeriodOSCvec = zeros(stcelic,1); % razultati za povpre?je period obmo?ij osciliranja
 
     for i=1:stcelic
-      [start_oscilacije,  povprecje_amplitud_oos, povprecje_period_oos ]= getOscilationArea(A_full(:,i), 0.2,0);  %debug poûene samo pri 10. indexu
+      [start_oscilacije,  povprecje_amplitud_oos, povprecje_period_oos ]= getOscilationArea(A_full(:,i), 0.2,0);  %debug po?ene samo pri 10. indexu
       zacetkiOSCvec(i)=start_oscilacije;
       povpAplitudOSCvec(i)=povprecje_amplitud_oos;
       povpPeriodOSCvec(i)=povprecje_period_oos;
@@ -98,16 +98,22 @@ function y = params_as_func(par, perorampl, size_p, density)
     
     rezultat =  [ zacetkiOSCvec povpAplitudOSCvec povpPeriodOSCvec ];
 
-    % pridobimo öe popreËja za vse celice:
+    % pridobimo ?e popre?ja za vse celice:
     rezultat_povpreceno_cez_vse_celice =  [ mean(zacetkiOSCvec) mean(povpAplitudOSCvec) mean(povpPeriodOSCvec) ];
    
+    if(isnan(rezultat_povpreceno_cez_vse_celice(3)))
+        rezultat_povpreceno_cez_vse_celice(2) = -1;
+    end
+    
     fprintf('rezultai so: zacOsc=%f, povpAmpl=%f, povprPer=%f |===================\n', rezultat_povpreceno_cez_vse_celice(1),rezultat_povpreceno_cez_vse_celice(2), rezultat_povpreceno_cez_vse_celice(3));
     if(perorampl == 0)
         %vrnem periodo
         y = rezultat_povpreceno_cez_vse_celice(3);
-    else
+    elseif( perorampl == 1 )
         % vrnem negirano amplitudo
         y = -rezultat_povpreceno_cez_vse_celice(2);
+    elseif( perorampl == 2 )
+        y = rezultat_povpreceno_cez_vse_celice(1);
     end
     
     
@@ -133,9 +139,9 @@ function y = params_as_func(par, perorampl, size_p, density)
 
 end
 % todo
-% z ga (genetic algorithm) oz podobnim za vse parametre poiskati najveËjo
-% amplitudo (npr 100 molov) z najmanjöo periodo
-% Ëe imamo cajt öe z lokalnimi minimumi poiöËemo najbolj oddaljene
-% parametre, katerih rezultat öe oscilira
+% z ga (genetic algorithm) oz podobnim za vse parametre poiskati najve?jo
+% amplitudo (npr 100 molov) z najmanj?o periodo
+% ?e imamo cajt ?e z lokalnimi minimumi poi??emo najbolj oddaljene
+% parametre, katerih rezultat ?e oscilira
 
 % usklajenosti ni potrebno primerjati

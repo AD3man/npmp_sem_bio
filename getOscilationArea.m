@@ -16,7 +16,7 @@ function [start_oscilacije, povprecje_amplitud_oos, povprecje_period_oos] = getO
     
     % Najdi doline (lokalne minimume)
     [doline_val, doline_idx]= najdidoline(DATA,0);
-    if( length(peaks_val) <= 0 || length(doline_val) <= 0)
+    if( length(peaks_val) <= 1 || length(doline_val) <= 1 || length(peaks_idx) <= 1 || length(doline_idx) <= 1)
         start_oscilacije = length(DATA_RAW);
         povprecje_amplitud_oos = -1;
         povprecje_period_oos = length(DATA_RAW);
@@ -44,7 +44,7 @@ function [start_oscilacije, povprecje_amplitud_oos, povprecje_period_oos] = getO
     doline_idx(1)= [];
     doline_val(1)= [];
     
-    %Najdi zadnjih n peakov ki se ne razlikujejo veï¿½ kot za epsilon
+    %Najdi zadnjih n peakov ki se ne razlikujejo ve??? kot za epsilon
     %current= length(peaks_val);
     %while 1 <= current
     %    if abs( peaks_val(end) - peaks_val(current) ) > epsilon
@@ -58,19 +58,19 @@ function [start_oscilacije, povprecje_amplitud_oos, povprecje_period_oos] = getO
    
     amplitude_abs = abs(peaks_val - doline_val);
     amplitude_abs_shifted=amplitude_abs(2:end);
-    % izraèunamo abs(A_i - A_(i+1)) Pri tem izgubimo zadnji index - se ne
+    % izra?unamo abs(A_i - A_(i+1)) Pri tem izgubimo zadnji index - se ne
     % preverja
     razlRes = abs(amplitude_abs(1:length(amplitude_abs_shifted)) - amplitude_abs_shifted);
-    razlResBool = razlRes>epsilon; % bool array, kjer se vrednost postavi na 1 kadar je  x > epsilon. Dobimo zadnji index para, ki še ne stabilno oscilira 
-    predOscilacijoArr = find(razlResBool,1,'last'); % išèem zadnji element bool arraya, ki je še 1
-    predOscilacijo = 0; % èe sluèajno oscilira že v prvi polovici osciliranja
+    razlResBool = razlRes>epsilon; % bool array, kjer se vrednost postavi na 1 kadar je  x > epsilon. Dobimo zadnji index para, ki ?e ne stabilno oscilira 
+    predOscilacijoArr = find(razlResBool,1,'last'); % i??em zadnji element bool arraya, ki je ?e 1
+    predOscilacijo = 0; % ?e slu?ajno oscilira ?e v prvi polovici osciliranja
     if(debug_bool == 1)
        rezultati_iskanja_osc_obmocja= [razlRes razlResBool] 
     end
     if(length(predOscilacijoArr) > 0) 
         predOscilacijo = predOscilacijoArr(1);
     end
-    %Najdi zadnjih n peakov ki se ne razlikujejo veï¿½ kot za epsilon
+    %Najdi zadnjih n peakov ki se ne razlikujejo ve??? kot za epsilon
     %current2= length(razlRes);
     %while 1 <= current2
     %    if razlRes > epsilon
@@ -80,25 +80,25 @@ function [start_oscilacije, povprecje_amplitud_oos, povprecje_period_oos] = getO
     %end
     
     if(debug_bool == 1)
-        % Izris oscilacije za prikaz izraèuna
+        % Izris oscilacije za prikaz izra?una
         TT=zanimivoPodrocje;
         figure()
-        plot(1:length(DATA_RAW)/2,DATA_RAW(1:length(DATA_RAW)/2),'m','DisplayName','Zavržena polovica'); 
+        plot(1:length(DATA_RAW)/2,DATA_RAW(1:length(DATA_RAW)/2),'m','DisplayName','Zavr?ena polovica'); 
         hold on;
         plot(TT,DATA,'b','DisplayName','Evaluirana polovica'); 
        
         plot(TT(doline_idx),doline_val,'r*','DisplayName','Lokalni minimumi'); 
         plot(TT(peaks_idx),peaks_val,'g*','DisplayName','Lokalni maksimumi'); 
-        plot(TT(peaks_idx(predOscilacijo+1)), DATA(peaks_idx(predOscilacijo+1)), 'y*','DisplayName','Zaèetek oscilacije'); 
-        plot(TT(doline_idx(predOscilacijo+1)), DATA(doline_idx(predOscilacijo+1)), 'y*','DisplayName','Zaèetek oscilacije'); 
+        plot(TT(peaks_idx(predOscilacijo+1)), DATA(peaks_idx(predOscilacijo+1)), 'y*','DisplayName','Za?etek oscilacije'); 
+        plot(TT(doline_idx(predOscilacijo+1)), DATA(doline_idx(predOscilacijo+1)), 'y*','DisplayName','Za?etek oscilacije'); 
         legend;
         hold off;
         %plot(length(DATA)/2:length(DATA),DATA(length(DATA)/2:length(DATA)),'b',TT(doline_idx),doline_val,'r*', TT(peaks_idx),peaks_val,'g*', TT(peaks_idx(current)), DATA(peaks_idx(current)), 'y*'); 
     end
     
-    %Vrni index zacetka oscilacije. Ker dobimo index zadnjega ki je vrèji od
+    %Vrni index zacetka oscilacije. Ker dobimo index zadnjega ki je vr?ji od
     %epsilon, indexu dodamo 1
-    start_oscilacije= peaks_idx(predOscilacijo+1) + length(DATA_RAW)/2;  % Dodamo še polovico dolžine.
+    start_oscilacije= peaks_idx(predOscilacijo+1) + length(DATA_RAW)/2;  % Dodamo ?e polovico dol?ine.
     
     peaksOscilacijeCasovniKoraki = peaks_idx(predOscilacijo+1:end);
     peaksOscilacijeCasovniKorakiShifted = peaksOscilacijeCasovniKoraki(2:end);

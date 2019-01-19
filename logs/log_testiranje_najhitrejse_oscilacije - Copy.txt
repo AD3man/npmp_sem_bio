@@ -1,0 +1,600 @@
+
+options = 
+
+  <a href="matlab: helpPopup ga" style="font-weight:bold">ga</a> options:
+
+   <strong>Set properties:</strong>
+                  MaxGenerations: 100
+                     UseParallel: 1
+                   UseVectorized: 0
+
+   <strong>Default properties:</strong>
+             ConstraintTolerance: 1.0000e-03
+                     CreationFcn: @gacreationuniform
+                    CrossoverFcn: @crossoverscattered
+               CrossoverFraction: 0.8000
+                         Display: 'final'
+                      EliteCount: '0.05*PopulationSize'
+                    FitnessLimit: -Inf
+               FitnessScalingFcn: @fitscalingrank
+               FunctionTolerance: 1.0000e-06
+                       HybridFcn: []
+         InitialPopulationMatrix: []
+          InitialPopulationRange: []
+             InitialScoresMatrix: []
+             MaxStallGenerations: 50
+                    MaxStallTime: Inf
+                         MaxTime: Inf
+                     MutationFcn: {@mutationgaussian  [1]  [1]}
+    NonlinearConstraintAlgorithm: 'auglag'
+                       OutputFcn: []
+                         PlotFcn: []
+                  PopulationSize: '50 when numberOfVariables <= 5, else 200'
+                  PopulationType: 'doubleVector'
+                    SelectionFcn: @selectionstochunif
+
+Testiram: alpha: 0.639249   beta: 7.227931   kd: 38.102811   n: 2.000000 - rezultai so: zacOsc=51445.750000, povpAmpl=0.000783, povprPer=1000.930851 |===================
+Elapsed time is 3.716081 seconds.
+Testiram: alpha: 0.966997   beta: 8.495384   kd: 26.898124   n: 2.000000 - rezultai so: zacOsc=51149.200000, povpAmpl=0.005280, povprPer=975.348698 |===================
+Testiram: alpha: 0.742688   beta: 5.813059   kd: 39.179194   n: 1.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Testiram: alpha: 0.570943   beta: 7.491820   kd: 7.365404   n: 1.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Testiram: alpha: 0.979746   beta: 6.119060   kd: 17.519010   n: 1.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Testiram: alpha: 0.517856   beta: 6.275476   kd: 39.919942   n: 2.000000 - rezultai so: zacOsc=51166.287500, povpAmpl=0.000005, povprPer=1016.517523 |===================
+Testiram: alpha: 0.773441   beta: 8.231565   kd: 37.932726   n: 3.000000 - rezultai so: zacOsc=51726.687500, povpAmpl=141.271845, povprPer=990.752926 |===================
+Elapsed time is 6.745377 seconds.
+Testiram: alpha: 0.548770   beta: 7.448822   kd: 15.006112   n: 3.000000 - rezultai so: zacOsc=50979.075000, povpAmpl=44.669347, povprPer=887.129717 |===================
+Elapsed time is 7.176155 seconds.
+Testiram: alpha: 0.957868   beta: 6.701929   kd: 24.000141   n: 3.000000 - rezultai so: zacOsc=51427.562500, povpAmpl=123.922982, povprPer=1004.196543 |===================
+Testiram: alpha: 0.816180   beta: 5.934363   kd: 45.942490   n: 3.000000 - rezultai so: zacOsc=52049.912500, povpAmpl=208.125289, povprPer=1082.297093 |===================
+Elapsed time is 7.445674 seconds.
+Testiram: alpha: 0.982444   beta: 8.773433   kd: 28.823260   n: 3.000000 - rezultai so: zacOsc=51481.762500, povpAmpl=90.816468, povprPer=931.225245 |===================
+Testiram: alpha: 0.985296   beta: 8.398513   kd: 3.643556   n: 3.000000 - rezultai so: zacOsc=51029.312500, povpAmpl=0.000002, povprPer=786.171398 |===================
+Testiram: alpha: 0.585593   beta: 6.287541   kd: 37.659428   n: 1.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Elapsed time is 3.861396 seconds.
+Testiram: alpha: 0.900140   beta: 5.594988   kd: 46.766524   n: 1.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Elapsed time is 4.152550 seconds.
+Elapsed time is 3.975264 seconds.
+Testiram: alpha: 0.978583   beta: 8.275490   kd: 27.009080   n: 2.000000 - rezultai so: zacOsc=51167.287500, povpAmpl=0.038043, povprPer=975.598958 |===================
+Elapsed time is 4.245717 seconds.
+Testiram: alpha: 0.515916   beta: 6.271411   kd: 5.107248   n: 2.000000 - rezultai so: zacOsc=51241.587500, povpAmpl=0.743673, povprPer=920.147794 |===================
+Elapsed time is 3.365777 seconds.
+Testiram: alpha: 0.924565   beta: 7.529785   kd: 16.249537   n: 3.000000 - rezultai so: zacOsc=51781.187500, povpAmpl=56.749249, povprPer=902.392548 |===================
+Elapsed time is 8.148219 seconds.
+Testiram: alpha: 0.696114   beta: 5.693122   kd: 33.049876   n: 2.000000 - rezultai so: zacOsc=51386.050000, povpAmpl=17.434127, povprPer=998.599734 |===================
+Elapsed time is 3.877359 seconds.
+Testiram: alpha: 0.827870   beta: 8.756335   kd: 8.946933   n: 4.000000 - rezultai so: zacOsc=50763.075000, povpAmpl=1.541281, povprPer=712.845522 |===================
+Elapsed time is 8.109223 seconds.
+Elapsed time is 7.397995 seconds.
+Testiram: alpha: 0.578807   beta: 6.380125   kd: 4.716860   n: 2.000000 - rezultai so: zacOsc=51145.062500, povpAmpl=0.350903, povprPer=918.222304 |===================
+Elapsed time is 4.662927 seconds.
+Testiram: alpha: 0.878870   beta: 9.796457   kd: 30.497115   n: 1.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Elapsed time is 7.373244 seconds.
+Testiram: alpha: 0.978753   beta: 8.546824   kd: 19.641847   n: 2.000000 - rezultai so: zacOsc=51385.625000, povpAmpl=0.000145, povprPer=960.876531 |===================
+Elapsed time is 4.801417 seconds.
+Elapsed time is 4.124943 seconds.
+Testiram: alpha: 0.896104   beta: 7.926339   kd: 1.583201   n: 3.000000 - rezultai so: zacOsc=51533.100000, povpAmpl=0.000000, povprPer=793.083333 |===================
+Elapsed time is 8.153658 seconds.
+Testiram: alpha: 0.911729   beta: 6.749919   kd: 41.465032   n: 2.000000 - rezultai so: zacOsc=51727.087500, povpAmpl=40.349585, povprPer=1006.147554 |===================
+Elapsed time is 3.861742 seconds.
+Testiram: alpha: 0.548566   beta: 9.646318   kd: 8.466523   n: 2.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Elapsed time is 4.133181 seconds.
+Elapsed time is 3.724762 seconds.
+Testiram: alpha: 0.827739   beta: 5.746470   kd: 34.771511   n: 2.000000 - rezultai so: zacOsc=51880.187500, povpAmpl=51.767095, povprPer=1011.341848 |===================
+Elapsed time is 4.785244 seconds.
+Elapsed time is 7.184007 seconds.
+Testiram: alpha: 0.710881   beta: 9.798720   kd: 28.872359   n: 4.000000 - rezultai so: zacOsc=51282.075000, povpAmpl=6.575612, povprPer=764.472782 |===================
+Elapsed time is 7.505054 seconds.
+Elapsed time is 3.904766 seconds.
+Testiram: alpha: 0.871566   beta: 7.736078   kd: 13.885593   n: 1.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Elapsed time is 3.831192 seconds.
+Testiram: alpha: 0.517223   beta: 7.366444   kd: 22.691235   n: 2.000000 - rezultai so: zacOsc=51936.325000, povpAmpl=0.000027, povprPer=971.435417 |===================
+Elapsed time is 3.876150 seconds.
+Elapsed time is 3.392852 seconds.
+Testiram: alpha: 0.853023   beta: 9.203586   kd: 23.076538   n: 3.000000 - rezultai so: zacOsc=50930.400000, povpAmpl=43.096117, povprPer=870.661806 |===================
+Elapsed time is 7.018352 seconds.
+Testiram: alpha: 0.523086   beta: 6.217625   kd: 45.753531   n: 3.000000 - rezultai so: zacOsc=51689.937500, povpAmpl=144.336877, povprPer=1030.220000 |===================
+Elapsed time is 5.849073 seconds.
+Elapsed time is 3.998574 seconds.
+Testiram: alpha: 0.839368   beta: 9.454516   kd: 9.116788   n: 3.000000 - rezultai so: zacOsc=51179.100000, povpAmpl=0.000001, povprPer=789.400266 |===================
+Elapsed time is 6.541952 seconds.
+Testiram: alpha: 0.882758   beta: 7.926320   kd: 1.227077   n: 2.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Elapsed time is 2.981698 seconds.
+Testiram: alpha: 0.975111   beta: 8.080223   kd: 4.830601   n: 3.000000 - rezultai so: zacOsc=51535.512500, povpAmpl=0.288578, povprPer=794.355000 |===================
+Elapsed time is 6.510445 seconds.
+Testiram: alpha: 0.638461   beta: 9.071424   kd: 12.219871   n: 3.000000 - rezultai so: zacOsc=51346.075000, povpAmpl=0.160442, povprPer=804.896822 |===================
+Elapsed time is 6.513614 seconds.
+Testiram: alpha: 0.719372   beta: 6.758298   kd: 6.225986   n: 4.000000 - rezultai so: zacOsc=51344.150000, povpAmpl=18.430927, povprPer=756.889881 |===================
+Elapsed time is 6.279959 seconds.
+Testiram: alpha: 0.658550   beta: 6.255419   kd: 49.810601   n: 4.000000 - rezultai so: zacOsc=51510.912500, povpAmpl=224.717830, povprPer=1070.363636 |===================
+Elapsed time is 6.731277 seconds.
+Testiram: alpha: 0.690779   beta: 9.154143   kd: 48.133006   n: 2.000000 - rezultai so: zacOsc=51874.837500, povpAmpl=0.000000, povprPer=1009.087000 |===================
+Testiram: alpha: 0.847414   beta: 5.982976   kd: 27.378779   n: 3.000000 - rezultai so: zacOsc=51672.425000, povpAmpl=148.359137, povprPer=1051.877841 |===================
+Elapsed time is 5.957821 seconds.
+Elapsed time is 2.815147 seconds.
+Testiram: alpha: 0.897600   beta: 7.748618   kd: 38.970613   n: 3.000000 - rezultai so: zacOsc=51451.900000, povpAmpl=172.117000, povprPer=1026.034511 |===================
+Elapsed time is 5.276312 seconds.
+Testiram: alpha: 0.969153   beta: 7.802636   kd: 45.922197   n: 2.000000 - rezultai so: zacOsc=53653.650000, povpAmpl=6.617661, povprPer=1002.070397 |===================
+Elapsed time is 3.451474 seconds.
+Testiram: alpha: 0.559078   beta: 8.572954   kd: 23.095369   n: 2.000000 - rezultai so: zacOsc=51647.825000, povpAmpl=0.000000, povprPer=965.937500 |===================
+Testiram: alpha: 0.816180   beta: 5.934363   kd: 45.942490   n: 3.000000 - rezultai so: zacOsc=52053.737500, povpAmpl=208.125271, povprPer=1082.296512 |===================
+Elapsed time is 7.307239 seconds.
+Testiram: alpha: 0.711229   beta: 6.156950   kd: 28.226666   n: 4.000000 - rezultai so: zacOsc=51842.787500, povpAmpl=166.733408, povprPer=1035.169722 |===================
+Testiram: alpha: 0.989401   beta: 5.921692   kd: 31.816811   n: 3.000000 - rezultai so: zacOsc=52048.512500, povpAmpl=185.034983, povprPer=1082.573547 |===================
+Testiram: alpha: 0.983128   beta: 8.798749   kd: 30.452840   n: 3.000000 - rezultai so: zacOsc=51051.375000, povpAmpl=99.216456, povprPer=939.894000 |===================
+Testiram: alpha: 0.908247   beta: 6.191399   kd: 33.093279   n: 3.000000 - rezultai so: zacOsc=51420.312500, povpAmpl=177.127107, povprPer=1068.314535 |===================
+Testiram: alpha: 0.823993   beta: 5.973711   kd: 26.997866   n: 4.000000 - rezultai so: zacOsc=51275.112500, povpAmpl=177.058194, povprPer=1045.363636 |===================
+Testiram: alpha: 0.583810   beta: 7.657435   kd: 12.372164   n: 3.000000 - rezultai so: zacOsc=51183.487500, povpAmpl=31.875918, povprPer=859.690909 |===================
+Elapsed time is 7.328019 seconds.
+Testiram: alpha: 0.658550   beta: 6.255419   kd: 49.810601   n: 4.000000 - rezultai so: zacOsc=51458.187500, povpAmpl=224.717847, povprPer=1070.363953 |===================
+Elapsed time is 7.694290 seconds.
+Testiram: alpha: 0.837470   beta: 9.099891   kd: 15.603302   n: 3.000000 - rezultai so: zacOsc=50973.787500, povpAmpl=13.007787, povprPer=826.294737 |===================
+Testiram: alpha: 0.504202   beta: 8.332210   kd: 37.738814   n: 3.000000 - rezultai so: zacOsc=51049.937500, povpAmpl=104.428041, povprPer=957.941582 |===================
+Elapsed time is 3.465918 seconds.
+Testiram: alpha: 0.704225   beta: 6.252544   kd: 46.273213   n: 2.000000 - rezultai so: zacOsc=51181.787500, povpAmpl=0.056059, povprPer=1016.220109 |===================
+Elapsed time is 4.627654 seconds.
+Testiram: alpha: 0.721598   beta: 6.822953   kd: 4.744246   n: 3.000000 - rezultai so: zacOsc=51455.937500, povpAmpl=14.930343, povprPer=835.124123 |===================
+Elapsed time is 7.072475 seconds.
+Testiram: alpha: 0.645486   beta: 6.338597   kd: 11.669850   n: 2.000000 - rezultai so: zacOsc=51693.125000, povpAmpl=7.436198, povprPer=945.654000 |===================
+Elapsed time is 4.126445 seconds.
+Testiram: alpha: 0.826512   beta: 8.134215   kd: 15.769046   n: 1.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Elapsed time is 7.280511 seconds.
+Testiram: alpha: 0.663369   beta: 9.332857   kd: 46.384662   n: 1.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Elapsed time is 4.075829 seconds.
+Elapsed time is 7.340238 seconds.
+Testiram: alpha: 0.906885   beta: 6.613134   kd: 47.433117   n: 3.000000 - rezultai so: zacOsc=52081.200000, povpAmpl=225.684427, povprPer=1082.412500 |===================
+Elapsed time is 7.165053 seconds.
+Elapsed time is 6.957977 seconds.
+Testiram: alpha: 0.727973   beta: 7.351640   kd: 38.929538   n: 3.000000 - rezultai so: zacOsc=51354.875000, povpAmpl=158.188291, povprPer=1023.756389 |===================
+Elapsed time is 7.732374 seconds.
+Elapsed time is 6.810948 seconds.
+Testiram: alpha: 0.813151   beta: 5.685196   kd: 6.179762   n: 3.000000 - rezultai so: zacOsc=98391.700000, povpAmpl=-1.000000, povprPer=NaN |===================
+Elapsed time is 7.937633 seconds.
+Elapsed time is 7.278968 seconds.
+Testiram: alpha: 0.898301   beta: 7.588960   kd: 40.568669   n: 4.000000 - rezultai so: zacOsc=51825.587500, povpAmpl=229.582624, povprPer=1035.447778 |===================
+Elapsed time is 7.526844 seconds.
+Elapsed time is 7.577310 seconds.
+Testiram: alpha: 0.632176   beta: 7.248048   kd: 36.202774   n: 3.000000 - rezultai so: zacOsc=51643.175000, povpAmpl=136.936049, povprPer=1008.754891 |===================
+Elapsed time is 7.789826 seconds.
+Testiram: alpha: 0.551655   beta: 7.487680   kd: 18.286286   n: 3.000000 - rezultai so: zacOsc=51189.850000, povpAmpl=57.259780, povprPer=907.730288 |===================
+Testiram: alpha: 0.960073   beta: 6.342185   kd: 26.974254   n: 3.000000 - rezultai so: zacOsc=51242.275000, povpAmpl=149.931173, povprPer=1041.485833 |===================
+Testiram: alpha: 0.959861   beta: 8.609660   kd: 27.365598   n: 2.000000 - rezultai so: zacOsc=51197.262500, povpAmpl=0.002118, povprPer=976.127865 |===================
+Elapsed time is 3.669729 seconds.
+Testiram: alpha: 0.966997   beta: 8.495384   kd: 26.898120   n: 1.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Elapsed time is 4.058367 seconds.
+Testiram: alpha: 0.658550   beta: 6.255419   kd: 49.810601   n: 4.000000 - rezultai so: zacOsc=51496.762500, povpAmpl=224.717818, povprPer=1070.363068 |===================
+Elapsed time is 7.178825 seconds.
+Elapsed time is 7.137398 seconds.
+Testiram: alpha: 0.554577   beta: 7.175986   kd: 13.615989   n: 3.000000 - rezultai so: zacOsc=51138.400000, povpAmpl=43.883240, povprPer=890.109906 |===================
+Elapsed time is 7.215482 seconds.
+Testiram: alpha: 0.515555   beta: 6.276483   kd: 39.021465   n: 2.000000 - rezultai so: zacOsc=51091.237500, povpAmpl=0.000008, povprPer=1014.680966 |===================
+Elapsed time is 2.886738 seconds.
+Testiram: alpha: 0.911729   beta: 6.749918   kd: 41.465036   n: 1.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Elapsed time is 2.955080 seconds.
+Elapsed time is 3.495697 seconds.
+Testiram: alpha: 0.853627   beta: 8.505036   kd: 27.879516   n: 4.000000 - rezultai so: zacOsc=51505.412500, povpAmpl=88.229141, povprPer=851.440455 |===================
+Elapsed time is 7.570776 seconds.
+Elapsed time is 7.300438 seconds.
+Testiram: alpha: 0.562909   beta: 6.522183   kd: 1.650877   n: 2.000000 - rezultai so: zacOsc=51338.400000, povpAmpl=0.000169, povprPer=904.638221 |===================
+Elapsed time is 3.786877 seconds.
+Testiram: alpha: 0.732092   beta: 8.537944   kd: 38.615451   n: 3.000000 - rezultai so: zacOsc=51054.112500, povpAmpl=131.493397, povprPer=976.860677 |===================
+Elapsed time is 5.919808 seconds.
+Testiram: alpha: 0.706082   beta: 9.803300   kd: 29.353129   n: 4.000000 - rezultai so: zacOsc=51447.737500, povpAmpl=10.737702, povprPer=766.947177 |===================
+Elapsed time is 5.997391 seconds.
+Testiram: alpha: 0.707428   beta: 6.307824   kd: 6.373104   n: 4.000000 - rezultai so: zacOsc=98340.487500, povpAmpl=-1.000000, povprPer=NaN |===================
+Elapsed time is 5.907543 seconds.
+Elapsed time is 7.566893 seconds.
+Testiram: alpha: 0.910495   beta: 8.197129   kd: 35.213458   n: 3.000000 - rezultai so: zacOsc=51715.812500, povpAmpl=141.949998, povprPer=990.746543 |===================
+Elapsed time is 6.294131 seconds.
+Testiram: alpha: 0.522481   beta: 6.185723   kd: 45.864788   n: 2.000000 - rezultai so: zacOsc=51785.400000, povpAmpl=0.000000, povprPer=1029.140385 |===================
+Elapsed time is 2.627318 seconds.
+Testiram: alpha: 0.517856   beta: 6.275473   kd: 39.919960   n: 2.000000 - rezultai so: zacOsc=51197.700000, povpAmpl=0.000006, povprPer=1016.426488 |===================
+Elapsed time is 2.675491 seconds.
+Testiram: alpha: 0.931010   beta: 7.740854   kd: 14.946531   n: 3.000000 - rezultai so: zacOsc=51594.400000, povpAmpl=46.147230, povprPer=883.295755 |===================
+Elapsed time is 5.413836 seconds.
+Testiram: alpha: 0.658550   beta: 6.255419   kd: 49.810601   n: 4.000000 - rezultai so: zacOsc=51495.187500, povpAmpl=224.717845, povprPer=1070.363636 |===================
+Elapsed time is 5.207820 seconds.
+Testiram: alpha: 0.914741   beta: 6.145943   kd: 19.408915   n: 2.000000 - rezultai so: zacOsc=51786.850000, povpAmpl=45.406008, povprPer=989.230585 |===================
+Testiram: alpha: 0.818493   beta: 8.404731   kd: 46.208866   n: 1.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Testiram: alpha: 0.887116   beta: 8.496860   kd: 32.179280   n: 2.000000 - rezultai so: zacOsc=51607.337500, povpAmpl=0.003570, povprPer=984.330990 |===================
+Testiram: alpha: 0.967316   beta: 8.260537   kd: 31.731682   n: 3.000000 - rezultai so: zacOsc=51788.112500, povpAmpl=124.332362, povprPer=972.417708 |===================
+Elapsed time is 6.710152 seconds.
+Testiram: alpha: 0.756372   beta: 6.204287   kd: 36.776866   n: 3.000000 - rezultai so: zacOsc=52019.312500, povpAmpl=169.704713, povprPer=1059.086364 |===================
+Testiram: alpha: 0.898301   beta: 7.588960   kd: 40.568669   n: 4.000000 - rezultai so: zacOsc=51828.637500, povpAmpl=229.582602, povprPer=1035.447778 |===================
+Elapsed time is 7.202757 seconds.
+Testiram: alpha: 0.920948   beta: 8.178439   kd: 39.493403   n: 3.000000 - rezultai so: zacOsc=51822.537500, povpAmpl=165.917598, povprPer=1012.171739 |===================
+Testiram: alpha: 0.892212   beta: 6.385372   kd: 47.592980   n: 3.000000 - rezultai so: zacOsc=51110.412500, povpAmpl=225.309725, povprPer=1085.431686 |===================
+Elapsed time is 7.329254 seconds.
+Testiram: alpha: 0.906885   beta: 6.613134   kd: 47.433117   n: 3.000000 - rezultai so: zacOsc=52043.650000, povpAmpl=225.684416, povprPer=1082.413081 |===================
+Elapsed time is 7.471535 seconds.
+Testiram: alpha: 0.713069   beta: 7.280279   kd: 34.926727   n: 3.000000 - rezultai so: zacOsc=51831.975000, povpAmpl=142.805356, povprPer=1012.651359 |===================
+Testiram: alpha: 0.828156   beta: 9.642955   kd: 28.406952   n: 3.000000 - rezultai so: zacOsc=51501.050000, povpAmpl=50.750447, povprPer=881.231481 |===================
+Testiram: alpha: 0.657962   beta: 6.630308   kd: 49.902656   n: 3.000000 - rezultai so: zacOsc=51540.537500, povpAmpl=182.139822, povprPer=1048.613333 |===================
+Elapsed time is 3.679452 seconds.
+Testiram: alpha: 0.632049   beta: 6.943196   kd: 37.837034   n: 2.000000 - rezultai so: zacOsc=51487.350000, povpAmpl=0.002113, povprPer=1001.923370 |===================
+Elapsed time is 4.130653 seconds.
+Elapsed time is 6.696389 seconds.
+Testiram: alpha: 0.699202   beta: 6.772608   kd: 46.784051   n: 2.000000 - rezultai so: zacOsc=51094.062500, povpAmpl=0.010051, povprPer=1014.563315 |===================
+Elapsed time is 4.106054 seconds.
+Elapsed time is 7.163881 seconds.
+Testiram: alpha: 0.657408   beta: 6.183164   kd: 46.554286   n: 2.000000 - rezultai so: zacOsc=51356.925000, povpAmpl=0.004088, povprPer=1020.017391 |===================
+Elapsed time is 3.823709 seconds.
+Elapsed time is 3.775832 seconds.
+Testiram: alpha: 0.787907   beta: 6.262335   kd: 33.218997   n: 4.000000 - rezultai so: zacOsc=51939.375000, povpAmpl=198.574958, povprPer=1058.305114 |===================
+Elapsed time is 7.356630 seconds.
+Elapsed time is 3.623625 seconds.
+Testiram: alpha: 0.960043   beta: 8.858752   kd: 27.905040   n: 3.000000 - rezultai so: zacOsc=50940.450000, povpAmpl=81.930421, povprPer=920.601225 |===================
+Elapsed time is 7.830227 seconds.
+Elapsed time is 7.575503 seconds.
+Testiram: alpha: 0.949401   beta: 7.820224   kd: 38.885776   n: 1.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Elapsed time is 4.156162 seconds.
+Testiram: alpha: 0.892116   beta: 7.467806   kd: 32.822675   n: 3.000000 - rezultai so: zacOsc=51798.562500, povpAmpl=148.382214, povprPer=1011.607609 |===================
+Testiram: alpha: 0.837430   beta: 6.587857   kd: 16.014429   n: 3.000000 - rezultai so: zacOsc=51340.950000, povpAmpl=73.896177, povprPer=945.456250 |===================
+Elapsed time is 7.423010 seconds.
+Testiram: alpha: 0.731994   beta: 8.930118   kd: 45.085961   n: 3.000000 - rezultai so: zacOsc=51418.412500, povpAmpl=147.816899, povprPer=985.271354 |===================
+Elapsed time is 7.548953 seconds.
+Elapsed time is 7.427404 seconds.
+Testiram: alpha: 0.910097   beta: 7.487985   kd: 44.067906   n: 3.000000 - rezultai so: zacOsc=51700.312500, povpAmpl=201.722582, povprPer=1052.851989 |===================
+Elapsed time is 7.614423 seconds.
+Testiram: alpha: 0.719464   beta: 6.209259   kd: 28.916991   n: 3.000000 - rezultai so: zacOsc=51968.225000, povpAmpl=137.548434, povprPer=1035.859444 |===================
+Testiram: alpha: 0.900565   beta: 5.575701   kd: 5.729436   n: 3.000000 - rezultai so: zacOsc=98567.162500, povpAmpl=-1.000000, povprPer=NaN |===================
+Testiram: alpha: 0.903737   beta: 6.248564   kd: 32.927500   n: 4.000000 - rezultai so: zacOsc=51271.362500, povpAmpl=214.202399, povprPer=1067.307558 |===================
+Elapsed time is 6.975154 seconds.
+Testiram: alpha: 0.989401   beta: 5.921692   kd: 31.816811   n: 4.000000 - rezultai so: zacOsc=52147.187500, povpAmpl=224.454934, povprPer=1085.193605 |===================
+Elapsed time is 6.934923 seconds.
+Testiram: alpha: 0.853627   beta: 8.505036   kd: 27.879516   n: 4.000000 - rezultai so: zacOsc=51480.437500, povpAmpl=88.229138, povprPer=851.442045 |===================
+Elapsed time is 6.482055 seconds.
+Testiram: alpha: 0.711573   beta: 6.452212   kd: 43.329543   n: 3.000000 - rezultai so: zacOsc=51865.475000, povpAmpl=178.912925, povprPer=1055.300284 |===================
+Elapsed time is 7.017176 seconds.
+Elapsed time is 6.856645 seconds.
+Testiram: alpha: 0.736381   beta: 7.361087   kd: 40.550126   n: 2.000000 - rezultai so: zacOsc=51462.100000, povpAmpl=0.022775, povprPer=1001.282337 |===================
+Elapsed time is 3.959565 seconds.
+Testiram: alpha: 0.910495   beta: 8.197129   kd: 35.213458   n: 3.000000 - rezultai so: zacOsc=51727.812500, povpAmpl=141.949998, povprPer=990.746543 |===================
+Elapsed time is 7.024206 seconds.
+Testiram: alpha: 0.906885   beta: 6.613134   kd: 47.433117   n: 3.000000 - rezultai so: zacOsc=52059.875000, povpAmpl=225.684423, povprPer=1082.410756 |===================
+Elapsed time is 6.995705 seconds.
+Elapsed time is 7.102063 seconds.
+Testiram: alpha: 0.874214   beta: 6.601655   kd: 47.060490   n: 4.000000 - rezultai so: zacOsc=51391.500000, povpAmpl=266.734377, povprPer=1091.778869 |===================
+Elapsed time is 6.603880 seconds.
+Elapsed time is 7.204528 seconds.
+Testiram: alpha: 0.721781   beta: 7.429262   kd: 48.631752   n: 3.000000 - rezultai so: zacOsc=51098.925000, povpAmpl=186.658970, povprPer=1040.329722 |===================
+Elapsed time is 6.332833 seconds.
+Testiram: alpha: 0.561095   beta: 8.360855   kd: 18.902161   n: 3.000000 - rezultai so: zacOsc=50943.425000, povpAmpl=41.234935, povprPer=870.918750 |===================
+Elapsed time is 6.169188 seconds.
+Elapsed time is 7.276966 seconds.
+Testiram: alpha: 0.656282   beta: 6.249571   kd: 49.818509   n: 4.000000 - rezultai so: zacOsc=51476.187500, povpAmpl=224.128350, povprPer=1070.068750 |===================
+Elapsed time is 6.675634 seconds.
+Testiram: alpha: 0.923112   beta: 6.332010   kd: 47.880453   n: 4.000000 - rezultai so: zacOsc=52046.087500, povpAmpl=281.150584, povprPer=1106.335714 |===================
+Elapsed time is 6.278365 seconds.
+Testiram: alpha: 0.706082   beta: 9.803300   kd: 29.353155   n: 4.000000 - rezultai so: zacOsc=51443.650000, povpAmpl=10.706811, povprPer=766.941129 |===================
+Elapsed time is 5.402519 seconds.
+Testiram: alpha: 0.991942   beta: 5.700784   kd: 36.174891   n: 4.000000 - rezultai so: zacOsc=51125.775000, povpAmpl=248.823276, povprPer=1110.765179 |===================
+Elapsed time is 5.242442 seconds.
+Testiram: alpha: 0.866645   beta: 8.637994   kd: 29.846854   n: 4.000000 - rezultai so: zacOsc=51121.925000, povpAmpl=97.088161, povprPer=860.463636 |===================
+Elapsed time is 5.269877 seconds.
+Testiram: alpha: 0.960078   beta: 6.342604   kd: 26.976897   n: 3.000000 - rezultai so: zacOsc=51164.800000, povpAmpl=149.936860, povprPer=1041.480278 |===================
+Elapsed time is 5.259954 seconds.
+Testiram: alpha: 0.700569   beta: 6.211208   kd: 40.275113   n: 3.000000 - rezultai so: zacOsc=51899.800000, povpAmpl=170.404092, povprPer=1056.066477 |===================
+Elapsed time is 6.929070 seconds.
+Testiram: alpha: 0.874214   beta: 6.601655   kd: 47.060490   n: 4.000000 - rezultai so: zacOsc=51345.800000, povpAmpl=266.734325, povprPer=1091.777381 |===================
+Elapsed time is 7.427890 seconds.
+Testiram: alpha: 0.720430   beta: 6.146597   kd: 49.360515   n: 3.000000 - rezultai so: zacOsc=51293.800000, povpAmpl=195.903388, povprPer=1065.992614 |===================
+Testiram: alpha: 0.903445   beta: 8.307165   kd: 41.718535   n: 3.000000 - rezultai so: zacOsc=51881.050000, povpAmpl=171.400994, povprPer=1014.288587 |===================
+Testiram: alpha: 0.889857   beta: 7.590003   kd: 42.000912   n: 4.000000 - rezultai so: zacOsc=51124.587500, povpAmpl=235.983811, povprPer=1041.822222 |===================
+Testiram: alpha: 0.624475   beta: 6.143384   kd: 35.136629   n: 3.000000 - rezultai so: zacOsc=51164.800000, povpAmpl=144.352101, povprPer=1040.487778 |===================
+Testiram: alpha: 0.739763   beta: 6.366064   kd: 31.145873   n: 3.000000 - rezultai so: zacOsc=51056.162500, povpAmpl=146.241313, povprPer=1038.785833 |===================
+Testiram: alpha: 0.863330   beta: 7.524602   kd: 39.562249   n: 3.000000 - rezultai so: zacOsc=51849.987500, povpAmpl=175.678747, povprPer=1033.700556 |===================
+Elapsed time is 7.433077 seconds.
+Testiram: alpha: 0.923112   beta: 6.332010   kd: 47.880453   n: 4.000000 - rezultai so: zacOsc=52046.137500, povpAmpl=281.150577, povprPer=1106.339286 |===================
+Elapsed time is 7.659773 seconds.
+Testiram: alpha: 0.848411   beta: 6.637362   kd: 49.632767   n: 3.000000 - rezultai so: zacOsc=51766.587500, povpAmpl=221.329543, povprPer=1076.418605 |===================
+Testiram: alpha: 0.706345   beta: 6.247894   kd: 49.223543   n: 3.000000 - rezultai so: zacOsc=51131.687500, povpAmpl=192.400590, povprPer=1062.227273 |===================
+Testiram: alpha: 0.927641   beta: 8.962681   kd: 40.009457   n: 3.000000 - rezultai so: zacOsc=51159.500000, povpAmpl=144.125663, povprPer=980.535938 |===================
+Elapsed time is 7.233695 seconds.
+Testiram: alpha: 0.640921   beta: 6.667900   kd: 3.514374   n: 2.000000 - rezultai so: zacOsc=51699.487500, povpAmpl=0.004065, povprPer=912.031127 |===================
+Elapsed time is 3.687673 seconds.
+Testiram: alpha: 0.967582   beta: 7.282511   kd: 41.749103   n: 3.000000 - rezultai so: zacOsc=52049.975000, povpAmpl=203.792392, povprPer=1059.541477 |===================
+Elapsed time is 7.091508 seconds.
+Testiram: alpha: 0.959749   beta: 6.627226   kd: 49.281190   n: 4.000000 - rezultai so: zacOsc=52016.137500, povpAmpl=293.080334, povprPer=1105.363690 |===================
+Elapsed time is 7.834434 seconds.
+Elapsed time is 7.412164 seconds.
+Testiram: alpha: 0.614801   beta: 9.680601   kd: 35.964174   n: 4.000000 - rezultai so: zacOsc=50911.162500, povpAmpl=85.242516, povprPer=841.794866 |===================
+Elapsed time is 7.655735 seconds.
+Testiram: alpha: 0.655598   beta: 7.540190   kd: 49.878360   n: 3.000000 - rezultai so: zacOsc=51668.962500, povpAmpl=175.558705, povprPer=1029.735556 |===================
+Elapsed time is 7.060092 seconds.
+Testiram: alpha: 0.827632   beta: 8.912173   kd: 29.682764   n: 3.000000 - rezultai so: zacOsc=51027.412500, povpAmpl=83.424602, povprPer=921.855147 |===================
+Elapsed time is 8.096837 seconds.
+Elapsed time is 7.584142 seconds.
+Testiram: alpha: 0.667199   beta: 5.708531   kd: 48.704379   n: 4.000000 - rezultai so: zacOsc=51960.425000, povpAmpl=221.582160, povprPer=1079.896802 |===================
+Elapsed time is 7.631877 seconds.
+Elapsed time is 7.045447 seconds.
+Testiram: alpha: 0.916208   beta: 5.901596   kd: 38.759681   n: 4.000000 - rezultai so: zacOsc=51854.587500, povpAmpl=245.952195, povprPer=1101.882738 |===================
+Elapsed time is 8.232704 seconds.
+Elapsed time is 7.731251 seconds.
+Testiram: alpha: 0.882394   beta: 7.755813   kd: 40.683345   n: 4.000000 - rezultai so: zacOsc=51313.112500, povpAmpl=224.128225, povprPer=1026.065556 |===================
+Elapsed time is 7.613736 seconds.
+Testiram: alpha: 0.940503   beta: 6.262287   kd: 47.811028   n: 4.000000 - rezultai so: zacOsc=52210.662500, povpAmpl=284.794066, povprPer=1110.193155 |===================
+Elapsed time is 7.629501 seconds.
+Testiram: alpha: 0.904214   beta: 6.790287   kd: 34.753847   n: 4.000000 - rezultai so: zacOsc=51418.562500, povpAmpl=215.079440, povprPer=1048.016111 |===================
+Elapsed time is 7.863406 seconds.
+Testiram: alpha: 0.787993   beta: 6.223657   kd: 29.829723   n: 3.000000 - rezultai so: zacOsc=51368.975000, povpAmpl=148.840542, povprPer=1045.097727 |===================
+Testiram: alpha: 0.889941   beta: 6.311666   kd: 47.569563   n: 3.000000 - rezultai so: zacOsc=51213.412500, povpAmpl=225.287948, povprPer=1086.547965 |===================
+Elapsed time is 6.741974 seconds.
+Elapsed time is 6.413292 seconds.
+Testiram: alpha: 0.706171   beta: 6.588429   kd: 48.775240   n: 3.000000 - rezultai so: zacOsc=51892.762500, povpAmpl=190.392583, povprPer=1056.252557 |===================
+Elapsed time is 7.524600 seconds.
+Testiram: alpha: 0.989401   beta: 5.921678   kd: 31.817091   n: 4.000000 - rezultai so: zacOsc=52110.362500, povpAmpl=224.456671, povprPer=1085.195058 |===================
+Elapsed time is 6.687674 seconds.
+Testiram: alpha: 0.719464   beta: 6.209259   kd: 28.916991   n: 4.000000 - rezultai so: zacOsc=51907.512500, povpAmpl=170.334908, povprPer=1036.477222 |===================
+Elapsed time is 6.459236 seconds.
+Testiram: alpha: 0.898832   beta: 7.594175   kd: 31.049452   n: 3.000000 - rezultai so: zacOsc=51075.562500, povpAmpl=136.212786, povprPer=997.025532 |===================
+Elapsed time is 6.729294 seconds.
+Testiram: alpha: 0.734786   beta: 8.262691   kd: 34.810944   n: 3.000000 - rezultai so: zacOsc=51776.387500, povpAmpl=122.501179, povprPer=972.642708 |===================
+Elapsed time is 6.645780 seconds.
+Elapsed time is 7.196687 seconds.
+Testiram: alpha: 0.910604   beta: 6.425716   kd: 30.371878   n: 3.000000 - rezultai so: zacOsc=51607.537500, povpAmpl=161.126229, povprPer=1049.568333 |===================
+Elapsed time is 7.739367 seconds.
+Testiram: alpha: 0.713069   beta: 7.280286   kd: 34.926641   n: 4.000000 - rezultai so: zacOsc=51617.637500, povpAmpl=181.625494, povprPer=1010.614674 |===================
+Elapsed time is 7.176322 seconds.
+Testiram: alpha: 0.714822   beta: 7.276691   kd: 31.286471   n: 3.000000 - rezultai so: zacOsc=51143.700000, povpAmpl=128.625167, povprPer=999.214096 |===================
+Elapsed time is 6.990925 seconds.
+Elapsed time is 7.490227 seconds.
+Testiram: alpha: 0.717744   beta: 7.636513   kd: 42.617620   n: 3.000000 - rezultai so: zacOsc=51278.775000, povpAmpl=164.671369, povprPer=1022.419293 |===================
+Elapsed time is 7.548882 seconds.
+Elapsed time is 7.429451 seconds.
+Testiram: alpha: 0.844861   beta: 6.588285   kd: 41.676109   n: 3.000000 - rezultai so: zacOsc=51385.562500, povpAmpl=195.994783, povprPer=1067.469767 |===================
+Elapsed time is 7.601887 seconds.
+Testiram: alpha: 0.989501   beta: 6.047383   kd: 44.131666   n: 4.000000 - rezultai so: zacOsc=51376.862500, povpAmpl=281.093892, povprPer=1116.250000 |===================
+Elapsed time is 7.552589 seconds.
+Testiram: alpha: 0.800304   beta: 9.202810   kd: 33.849283   n: 2.000000 - rezultai so: zacOsc=51716.375000, povpAmpl=0.000003, povprPer=986.231250 |===================
+Elapsed time is 2.427301 seconds.
+Testiram: alpha: 0.960043   beta: 8.858753   kd: 27.905049   n: 4.000000 - rezultai so: zacOsc=50895.900000, povpAmpl=70.042823, povprPer=827.056579 |===================
+Elapsed time is 5.578227 seconds.
+Testiram: alpha: 0.991943   beta: 5.700695   kd: 36.176647   n: 4.000000 - rezultai so: zacOsc=51161.137500, povpAmpl=248.832176, povprPer=1110.773214 |===================
+Elapsed time is 5.268405 seconds.
+Testiram: alpha: 0.711570   beta: 6.452187   kd: 43.329656   n: 3.000000 - rezultai so: zacOsc=51858.075000, povpAmpl=178.912688, povprPer=1055.298580 |===================
+Elapsed time is 5.273843 seconds.
+Testiram: alpha: 0.899479   beta: 5.958744   kd: 47.276718   n: 2.000000 - rezultai so: zacOsc=51347.987500, povpAmpl=51.432254, povprPer=1020.224457 |===================
+Testiram: alpha: 0.694778   beta: 6.369309   kd: 48.847985   n: 4.000000 - rezultai so: zacOsc=51663.312500, povpAmpl=231.797404, povprPer=1073.769318 |===================
+Testiram: alpha: 0.652852   beta: 7.395675   kd: 32.137947   n: 3.000000 - rezultai so: zacOsc=51792.425000, povpAmpl=123.025426, povprPer=991.935638 |===================
+Testiram: alpha: 0.904644   beta: 7.575854   kd: 42.806550   n: 3.000000 - rezultai so: zacOsc=51386.400000, povpAmpl=193.981464, povprPer=1045.908523 |===================
+Elapsed time is 7.153523 seconds.
+Testiram: alpha: 0.959749   beta: 6.627226   kd: 49.281190   n: 4.000000 - rezultai so: zacOsc=51982.612500, povpAmpl=293.080286, povprPer=1105.362500 |===================
+Elapsed time is 7.244166 seconds.
+Testiram: alpha: 0.945920   beta: 8.951482   kd: 31.437077   n: 4.000000 - rezultai so: zacOsc=51485.375000, povpAmpl=91.493586, povprPer=851.101563 |===================
+Testiram: alpha: 0.940503   beta: 6.262287   kd: 47.811028   n: 4.000000 - rezultai so: zacOsc=51128.212500, povpAmpl=284.794114, povprPer=1110.192560 |===================
+Elapsed time is 7.311527 seconds.
+Testiram: alpha: 0.838498   beta: 6.283673   kd: 48.765082   n: 4.000000 - rezultai so: zacOsc=51636.912500, povpAmpl=265.568423, povprPer=1097.221221 |===================
+Elapsed time is 7.465022 seconds.
+Testiram: alpha: 0.690956   beta: 6.201727   kd: 26.552940   n: 4.000000 - rezultai so: zacOsc=51166.475000, povpAmpl=155.907590, povprPer=1022.172826 |===================
+Testiram: alpha: 0.905754   beta: 5.943663   kd: 45.879122   n: 3.000000 - rezultai so: zacOsc=51543.062500, povpAmpl=225.030280, povprPer=1094.280233 |===================
+Testiram: alpha: 0.926452   beta: 6.334535   kd: 47.572989   n: 3.000000 - rezultai so: zacOsc=51338.475000, povpAmpl=231.951488, povprPer=1090.815988 |===================
+Testiram: alpha: 0.938214   beta: 6.262440   kd: 47.860664   n: 3.000000 - rezultai so: zacOsc=51475.600000, povpAmpl=235.534722, povprPer=1093.929167 |===================
+Elapsed time is 2.973918 seconds.
+Testiram: alpha: 0.889633   beta: 6.309035   kd: 40.697246   n: 3.000000 - rezultai so: zacOsc=51855.800000, povpAmpl=202.680705, povprPer=1078.859593 |===================
+Elapsed time is 7.550653 seconds.
+Elapsed time is 6.720899 seconds.
+Testiram: alpha: 0.735784   beta: 8.585333   kd: 32.194829   n: 2.000000 - rezultai so: zacOsc=51624.625000, povpAmpl=0.000021, povprPer=985.076302 |===================
+Elapsed time is 4.512088 seconds.
+Elapsed time is 7.586851 seconds.
+Testiram: alpha: 0.831663   beta: 6.638833   kd: 49.672949   n: 2.000000 - rezultai so: zacOsc=51082.812500, povpAmpl=3.238824, povprPer=1013.114402 |===================
+Elapsed time is 4.063378 seconds.
+Elapsed time is 7.501999 seconds.
+Testiram: alpha: 0.720794   beta: 6.170097   kd: 33.590367   n: 2.000000 - rezultai so: zacOsc=51226.312500, povpAmpl=9.635026, povprPer=994.470745 |===================
+Elapsed time is 4.437069 seconds.
+Elapsed time is 6.453139 seconds.
+Testiram: alpha: 0.926737   beta: 6.323963   kd: 47.789515   n: 4.000000 - rezultai so: zacOsc=52073.187500, povpAmpl=281.611035, povprPer=1106.873810 |===================
+Elapsed time is 7.537186 seconds.
+Testiram: alpha: 0.989318   beta: 6.040220   kd: 43.774473   n: 4.000000 - rezultai so: zacOsc=51375.112500, povpAmpl=279.618684, povprPer=1115.817988 |===================
+Elapsed time is 7.222019 seconds.
+Testiram: alpha: 0.987391   beta: 5.807643   kd: 45.686641   n: 4.000000 - rezultai so: zacOsc=51740.012500, povpAmpl=287.319020, povprPer=1124.517073 |===================
+Elapsed time is 7.543444 seconds.
+Testiram: alpha: 0.923627   beta: 6.330844   kd: 47.805431   n: 4.000000 - rezultai so: zacOsc=52015.800000, povpAmpl=280.986261, povprPer=1106.326190 |===================
+Testiram: alpha: 0.627604   beta: 7.544225   kd: 41.927203   n: 3.000000 - rezultai so: zacOsc=51795.437500, povpAmpl=149.190015, povprPer=1012.176630 |===================
+Testiram: alpha: 0.676713   beta: 6.208563   kd: 41.009460   n: 3.000000 - rezultai so: zacOsc=51770.062500, povpAmpl=167.903931, povprPer=1053.357670 |===================
+Elapsed time is 7.568233 seconds.
+Testiram: alpha: 0.695970   beta: 7.353268   kd: 37.742933   n: 4.000000 - rezultai so: zacOsc=51027.162500, povpAmpl=190.396372, povprPer=1019.091576 |===================
+Elapsed time is 7.673860 seconds.
+Elapsed time is 7.589803 seconds.
+Testiram: alpha: 0.647565   beta: 6.318663   kd: 48.705478   n: 4.000000 - rezultai so: zacOsc=51322.125000, povpAmpl=219.516440, povprPer=1066.712500 |===================
+Elapsed time is 7.766526 seconds.
+Testiram: alpha: 0.957468   beta: 6.566395   kd: 28.973002   n: 4.000000 - rezultai so: zacOsc=51312.350000, povpAmpl=190.309599, povprPer=1024.831944 |===================
+Elapsed time is 7.057128 seconds.
+Testiram: alpha: 0.942558   beta: 6.218674   kd: 47.886659   n: 4.000000 - rezultai so: zacOsc=51157.137500, povpAmpl=285.616917, povprPer=1111.629762 |===================
+Elapsed time is 6.900545 seconds.
+Testiram: alpha: 0.704354   beta: 6.235856   kd: 49.231033   n: 3.000000 - rezultai so: zacOsc=51148.325000, povpAmpl=191.993359, povprPer=1062.100284 |===================
+Elapsed time is 6.937971 seconds.
+Testiram: alpha: 0.996990   beta: 6.222014   kd: 24.461436   n: 3.000000 - rezultai so: zacOsc=51964.800000, povpAmpl=141.075571, povprPer=1035.736667 |===================
+Elapsed time is 6.780985 seconds.
+Testiram: alpha: 0.981947   beta: 5.747808   kd: 44.245294   n: 4.000000 - rezultai so: zacOsc=51739.662500, povpAmpl=280.722393, povprPer=1123.547561 |===================
+Elapsed time is 6.176945 seconds.
+Testiram: alpha: 0.873927   beta: 6.600428   kd: 47.062741   n: 4.000000 - rezultai so: zacOsc=51373.875000, povpAmpl=266.688270, povprPer=1091.778869 |===================
+Elapsed time is 6.275568 seconds.
+Elapsed time is 7.104674 seconds.
+Testiram: alpha: 0.911121   beta: 5.857214   kd: 46.807127   n: 4.000000 - rezultai so: zacOsc=51357.762500, povpAmpl=275.119951, povprPer=1114.650305 |===================
+Elapsed time is 6.869785 seconds.
+Elapsed time is 6.939684 seconds.
+Testiram: alpha: 0.945113   beta: 6.326039   kd: 47.780747   n: 4.000000 - rezultai so: zacOsc=52186.112500, povpAmpl=285.474309, povprPer=1109.119345 |===================
+Elapsed time is 7.148996 seconds.
+Elapsed time is 7.100297 seconds.
+Testiram: alpha: 0.652420   beta: 7.419072   kd: 49.688714   n: 3.000000 - rezultai so: zacOsc=51783.475000, povpAmpl=175.594013, povprPer=1031.813333 |===================
+Elapsed time is 6.987033 seconds.
+Elapsed time is 7.133643 seconds.
+Testiram: alpha: 0.937034   beta: 5.818484   kd: 34.458319   n: 4.000000 - rezultai so: zacOsc=51540.800000, povpAmpl=231.240849, povprPer=1095.697674 |===================
+Elapsed time is 7.090738 seconds.
+Testiram: alpha: 0.844861   beta: 6.588285   kd: 41.676109   n: 3.000000 - rezultai so: zacOsc=51357.187500, povpAmpl=195.994788, povprPer=1067.470349 |===================
+Elapsed time is 6.408720 seconds.
+Testiram: alpha: 0.908593   beta: 6.752134   kd: 38.806130   n: 3.000000 - rezultai so: zacOsc=51176.587500, povpAmpl=192.565621, povprPer=1063.822159 |===================
+Elapsed time is 6.471017 seconds.
+Testiram: alpha: 0.863004   beta: 7.526817   kd: 39.571588   n: 2.000000 - rezultai so: zacOsc=51254.562500, povpAmpl=1.207097, povprPer=996.287234 |===================
+Elapsed time is 2.359864 seconds.
+Testiram: alpha: 0.742369   beta: 6.056619   kd: 49.410698   n: 3.000000 - 
+Testiram: alpha: 0.991943   beta: 5.700695   kd: 36.176647   n: 4.000000 - 
+Testiram: alpha: 0.920183   beta: 7.733857   kd: 43.154154   n: 4.000000 - 
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('distcomp.remoteparfor/getCompleteIntervals', 'D:\Coding_programs\matlab\toolbox\distcomp\distcomp\+distcomp\remoteparfor.m', 225)" style="font-weight:bold">distcomp.remoteparfor/getCompleteIntervals</a> (<a href="matlab: opentoline('D:\Coding_programs\matlab\toolbox\distcomp\distcomp\+distcomp\remoteparfor.m',225,0)">line 225</a>)
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel_function>distributed_execution', 'D:\Coding_programs\matlab\toolbox\matlab\lang\parallel_function.p', 823)" style="font-weight:bold">parallel_function>distributed_execution</a> (<a href="matlab: opentoline('D:\Coding_programs\matlab\toolbox\matlab\lang\parallel_function.p',823,0)">line 823</a>)
+        [tags, out] = P.getCompleteIntervals(chunkSize);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel_function', 'D:\Coding_programs\matlab\toolbox\matlab\lang\parallel_function.p', 590)" style="font-weight:bold">parallel_function</a> (<a href="matlab: opentoline('D:\Coding_programs\matlab\toolbox\matlab\lang\parallel_function.p',590,0)">line 590</a>)
+        R = distributed_execution(...
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fcnvectorizer', 'D:\Coding_programs\matlab\toolbox\globaloptim\globaloptim\private\fcnvectorizer.m', 16)" style="font-weight:bold">fcnvectorizer</a> (<a href="matlab: opentoline('D:\Coding_programs\matlab\toolbox\globaloptim\globaloptim\private\fcnvectorizer.m',16,0)">line 16</a>)
+        parfor (i = 1:popSize)
+
+In gaminlppenaltyfcn
+
+In gapenalty
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('stepGA', 'D:\Coding_programs\matlab\toolbox\globaloptim\globaloptim\private\stepGA.m', 46)" style="font-weight:bold">stepGA</a> (<a href="matlab: opentoline('D:\Coding_programs\matlab\toolbox\globaloptim\globaloptim\private\stepGA.m',46,0)">line 46</a>)
+    nextScore = FitnessFcn(nextPopulation);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('galincon', 'D:\Coding_programs\matlab\toolbox\globaloptim\globaloptim\private\galincon.m', 62)" style="font-weight:bold">galincon</a> (<a href="matlab: opentoline('D:\Coding_programs\matlab\toolbox\globaloptim\globaloptim\private\galincon.m',62,0)">line 62</a>)
+        [score,population,state] = stepGA(score,population,options,state,GenomeLength,FitnessFcn);
+
+In gapenalty
+
+In gaminlp
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ga', 'D:\Coding_programs\matlab\toolbox\globaloptim\globaloptim\ga.m', 366)" style="font-weight:bold">ga</a> (<a href="matlab: opentoline('D:\Coding_programs\matlab\toolbox\globaloptim\globaloptim\ga.m',366,0)">line 366</a>)
+    [x,fval,exitFlag,output,population,scores] = gaminlp(FitnessFcn,nvars, ...
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Anze_testi_amplituda', 'D:\FAX\magisterij\npmp\npmp_sem_bio\Anze_testi_amplituda.m', 13)" style="font-weight:bold">Anze_testi_amplituda</a> (<a href="matlab: opentoline('D:\FAX\magisterij\npmp\npmp_sem_bio\Anze_testi_amplituda.m',13,0)">line 13</a>)
+opt_max_ampl_rez_10_80 = ga(@(x)params_as_func(x,1,10,0.8),4,[],[],[],[],meje_od,meje_do,[],[4],options);
+} 
+Anze_testi_amplituda
+
+options = 
+
+  <a href="matlab: helpPopup ga" style="font-weight:bold">ga</a> options:
+
+   <strong>Set properties:</strong>
+                  MaxGenerations: 100
+                     UseParallel: 1
+                   UseVectorized: 0
+
+   <strong>Default properties:</strong>
+             ConstraintTolerance: 1.0000e-03
+                     CreationFcn: @gacreationuniform
+                    CrossoverFcn: @crossoverscattered
+               CrossoverFraction: 0.8000
+                         Display: 'final'
+                      EliteCount: '0.05*PopulationSize'
+                    FitnessLimit: -Inf
+               FitnessScalingFcn: @fitscalingrank
+               FunctionTolerance: 1.0000e-06
+                       HybridFcn: []
+         InitialPopulationMatrix: []
+          InitialPopulationRange: []
+             InitialScoresMatrix: []
+             MaxStallGenerations: 50
+                    MaxStallTime: Inf
+                         MaxTime: Inf
+                     MutationFcn: {@mutationgaussian  [1]  [1]}
+    NonlinearConstraintAlgorithm: 'auglag'
+                       OutputFcn: []
+                         PlotFcn: []
+                  PopulationSize: '50 when numberOfVariables <= 5, else 200'
+                  PopulationType: 'doubleVector'
+                    SelectionFcn: @selectionstochunif
+
+Testiram: alpha: 0.639249   beta: 4.455862   kd: 38.102811   n: 2.000000 - rezultai so: zacOsc=51471.762500, povpAmpl=0.482946, povprPer=1022.119167 |===================
+Elapsed time is 3.010609 seconds.
+Testiram: alpha: 0.742688   beta: 1.626117   kd: 39.179194   n: 1.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Testiram: alpha: 0.570943   beta: 4.983641   kd: 7.365404   n: 1.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Testiram: alpha: 0.979746   beta: 2.238119   kd: 17.519010   n: 1.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Testiram: alpha: 0.517856   beta: 2.550951   kd: 39.919942   n: 2.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Testiram: alpha: 0.966997   beta: 6.990767   kd: 26.898124   n: 2.000000 - rezultai so: zacOsc=51668.200000, povpAmpl=35.825424, povprPer=985.733333 |===================
+Testiram: alpha: 0.548770   beta: 4.897644   kd: 15.006112   n: 3.000000 - rezultai so: zacOsc=51464.562500, povpAmpl=82.291286, povprPer=1024.946196 |===================
+Elapsed time is 7.334716 seconds.
+Testiram: alpha: 0.982444   beta: 7.546867   kd: 28.823260   n: 3.000000 - rezultai so: zacOsc=51768.612500, povpAmpl=130.677636, povprPer=991.567021 |===================
+Testiram: alpha: 0.985296   beta: 6.797027   kd: 3.643556   n: 3.000000 - rezultai so: zacOsc=51181.600000, povpAmpl=11.143594, povprPer=830.441228 |===================
+Testiram: alpha: 0.585593   beta: 2.575083   kd: 37.659428   n: 1.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Testiram: alpha: 0.773441   beta: 6.463130   kd: 37.932726   n: 3.000000 - rezultai so: zacOsc=51832.587500, povpAmpl=173.528447, povprPer=1055.689205 |===================
+Elapsed time is 7.584842 seconds.
+Testiram: alpha: 0.957868   beta: 3.403857   kd: 24.000141   n: 3.000000 - rezultai so: zacOsc=51589.112500, povpAmpl=163.214577, povprPer=1144.836875 |===================
+Elapsed time is 3.384299 seconds.
+Testiram: alpha: 0.900140   beta: 1.189977   kd: 46.766524   n: 1.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Elapsed time is 4.276168 seconds.
+Testiram: alpha: 0.816180   beta: 1.868726   kd: 45.942490   n: 3.000000 - rezultai so: zacOsc=53064.725000, povpAmpl=104.349485, povprPer=1068.803426 |===================
+Elapsed time is 7.693234 seconds.
+Elapsed time is 3.994318 seconds.
+Testiram: alpha: 0.978583   beta: 6.550980   kd: 27.009080   n: 2.000000 - rezultai so: zacOsc=51176.937500, povpAmpl=53.435049, povprPer=997.980585 |===================
+Elapsed time is 4.195062 seconds.
+Elapsed time is 3.771926 seconds.
+Testiram: alpha: 0.924565   beta: 5.059571   kd: 16.249537   n: 3.000000 - rezultai so: zacOsc=51307.375000, povpAmpl=110.906994, povprPer=1043.792778 |===================
+Elapsed time is 7.177797 seconds.
+Elapsed time is 3.207868 seconds.
+Testiram: alpha: 0.827870   beta: 7.512671   kd: 8.946933   n: 4.000000 - rezultai so: zacOsc=50859.750000, povpAmpl=19.779811, povprPer=750.195437 |===================
+Elapsed time is 7.878801 seconds.
+Elapsed time is 7.036455 seconds.
+Testiram: alpha: 0.978753   beta: 7.093648   kd: 19.641847   n: 2.000000 - rezultai so: zacOsc=51727.387500, povpAmpl=17.398881, povprPer=965.675260 |===================
+Elapsed time is 4.621490 seconds.
+Testiram: alpha: 0.696114   beta: 1.386244   kd: 33.049876   n: 2.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Elapsed time is 3.989045 seconds.
+Testiram: alpha: 0.896104   beta: 5.852678   kd: 1.583201   n: 3.000000 - rezultai so: zacOsc=51491.412500, povpAmpl=6.777864, povprPer=848.424107 |===================
+Elapsed time is 8.010218 seconds.
+Testiram: alpha: 0.911729   beta: 3.499838   kd: 41.465032   n: 2.000000 - rezultai so: zacOsc=51422.050000, povpAmpl=58.461388, povprPer=1044.098611 |===================
+Elapsed time is 3.932294 seconds.
+Testiram: alpha: 0.515916   beta: 2.542822   kd: 5.107248   n: 2.000000 - rezultai so: zacOsc=51549.600000, povpAmpl=32.017018, povprPer=1069.461364 |===================
+Elapsed time is 7.236959 seconds.
+Testiram: alpha: 0.578807   beta: 2.760251   kd: 4.716860   n: 2.000000 - rezultai so: zacOsc=51393.100000, povpAmpl=32.913661, povprPer=1065.511364 |===================
+Elapsed time is 5.087624 seconds.
+Elapsed time is 4.011526 seconds.
+Testiram: alpha: 0.827739   beta: 1.492940   kd: 34.771511   n: 2.000000 - rezultai so: zacOsc=51903.612500, povpAmpl=0.000000, povprPer=1103.574534 |===================
+Elapsed time is 4.965660 seconds.
+Testiram: alpha: 0.548566   beta: 9.292636   kd: 8.466523   n: 2.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Elapsed time is 4.035240 seconds.
+Testiram: alpha: 0.878870   beta: 9.592914   kd: 30.497115   n: 1.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Elapsed time is 7.471341 seconds.
+Testiram: alpha: 0.710881   beta: 9.597440   kd: 28.872359   n: 4.000000 - rezultai so: zacOsc=51491.025000, povpAmpl=34.470484, povprPer=783.673333 |===================
+Elapsed time is 7.516376 seconds.
+Elapsed time is 4.532942 seconds.
+Testiram: alpha: 0.517223   beta: 4.732888   kd: 22.691235   n: 2.000000 - rezultai so: zacOsc=51119.637500, povpAmpl=15.204832, povprPer=993.277128 |===================
+Elapsed time is 4.040086 seconds.
+Elapsed time is 3.848143 seconds.
+Testiram: alpha: 0.871566   beta: 5.472155   kd: 13.885593   n: 1.000000 - rezultai so: zacOsc=100000.000000, povpAmpl=-1.000000, povprPer=100000.000000 |===================
+Elapsed time is 4.146974 seconds.
+Testiram: alpha: 0.839368   beta: 8.909033   kd: 9.116788   n: 3.000000 - 
+Testiram: alpha: 0.719372   beta: 3.516595   kd: 6.225986   n: 4.000000 - 
+Elapsed time is 4.093844 seconds.
+Testiram: alpha: 0.853023   beta: 8.407173   kd: 23.076538   n: 3.000000 - 
+Testiram: alpha: 0.638461   beta: 8.142848   kd: 12.219871   n: 3.000000 - 
+Testiram: alpha: 0.523086   beta: 2.435250   kd: 45.753531   n: 3.000000 - 
+Testiram: alpha: 0.897600   beta: 5.497236   kd: 38.970613   n: 3.000000 - 
+Testiram: alpha: 0.847414   beta: 1.965953   kd: 27.378779   n: 3.000000 - 
+Testiram: alpha: 0.658550   beta: 2.510839   kd: 49.810601   n: 4.000000 - 
+Testiram: alpha: 0.975111   beta: 6.160447   kd: 4.830601   n: 3.000000 - 
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('distcomp.remoteparfor/getCompleteIntervals', 'D:\Coding_programs\matlab\toolbox\distcomp\distcomp\+distcomp\remoteparfor.m', 225)" style="font-weight:bold">distcomp.remoteparfor/getCompleteIntervals</a> (<a href="matlab: opentoline('D:\Coding_programs\matlab\toolbox\distcomp\distcomp\+distcomp\remoteparfor.m',225,0)">line 225</a>)
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel_function>distributed_execution', 'D:\Coding_programs\matlab\toolbox\matlab\lang\parallel_function.p', 823)" style="font-weight:bold">parallel_function>distributed_execution</a> (<a href="matlab: opentoline('D:\Coding_programs\matlab\toolbox\matlab\lang\parallel_function.p',823,0)">line 823</a>)
+        [tags, out] = P.getCompleteIntervals(chunkSize);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel_function', 'D:\Coding_programs\matlab\toolbox\matlab\lang\parallel_function.p', 590)" style="font-weight:bold">parallel_function</a> (<a href="matlab: opentoline('D:\Coding_programs\matlab\toolbox\matlab\lang\parallel_function.p',590,0)">line 590</a>)
+        R = distributed_execution(...
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fcnvectorizer', 'D:\Coding_programs\matlab\toolbox\globaloptim\globaloptim\private\fcnvectorizer.m', 16)" style="font-weight:bold">fcnvectorizer</a> (<a href="matlab: opentoline('D:\Coding_programs\matlab\toolbox\globaloptim\globaloptim\private\fcnvectorizer.m',16,0)">line 16</a>)
+        parfor (i = 1:popSize)
+
+In gaminlppenaltyfcn
+
+In gapenalty
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('makeState', 'D:\Coding_programs\matlab\toolbox\globaloptim\globaloptim\private\makeState.m', 64)" style="font-weight:bold">makeState</a> (<a href="matlab: opentoline('D:\Coding_programs\matlab\toolbox\globaloptim\globaloptim\private\makeState.m',64,0)">line 64</a>)
+            Score = FitnessFcn(state.Population(initScoreProvided+1:end,:));
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('galincon', 'D:\Coding_programs\matlab\toolbox\globaloptim\globaloptim\private\galincon.m', 17)" style="font-weight:bold">galincon</a> (<a href="matlab: opentoline('D:\Coding_programs\matlab\toolbox\globaloptim\globaloptim\private\galincon.m',17,0)">line 17</a>)
+state = makeState(GenomeLength,FitnessFcn,Iterate,output.problemtype,options);
+
+In gapenalty
+
+In gaminlp
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ga', 'D:\Coding_programs\matlab\toolbox\globaloptim\globaloptim\ga.m', 366)" style="font-weight:bold">ga</a> (<a href="matlab: opentoline('D:\Coding_programs\matlab\toolbox\globaloptim\globaloptim\ga.m',366,0)">line 366</a>)
+    [x,fval,exitFlag,output,population,scores] = gaminlp(FitnessFcn,nvars, ...
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Anze_testi_amplituda', 'D:\FAX\magisterij\npmp\npmp_sem_bio\Anze_testi_amplituda.m', 13)" style="font-weight:bold">Anze_testi_amplituda</a> (<a href="matlab: opentoline('D:\FAX\magisterij\npmp\npmp_sem_bio\Anze_testi_amplituda.m',13,0)">line 13</a>)
+opt_max_ampl_rez_10_80 = ga(@(x)params_as_func(x,1,10,0.8),4,[],[],[],[],meje_od,meje_do,[],[4],options);
+} 
+diary off
