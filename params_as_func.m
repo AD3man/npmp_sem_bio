@@ -1,4 +1,4 @@
-function y = params_as_func(par, perorampl)
+function y = params_as_func(par, perorampl, size_p, density)
     % y - povpreèna perioda ali negirana povpreèna amplituda
 
 
@@ -7,7 +7,7 @@ function y = params_as_func(par, perorampl)
     %alpha0 = 0.001 * alpha;
     %n = 2;
     %beta = 5; 
-    fprintf('Testiram: alpha: %f   beta: %f   kd: %f   n: %f\n', par(1),par(2), par(3), par(4));
+    fprintf('Testiram: alpha: %f   beta: %f   kd: %f   n: %f - ', par(1),par(2), par(3), par(4));
     tic;
     p={};
     p.alpha = par(1); % min**(-1)              maksimalna hitrost transkripcije
@@ -28,8 +28,8 @@ function y = params_as_func(par, perorampl)
     p.D1=0.5;
 
     % environment
-    p.size_polje = 10; % size of the space equals [size x size]
-    p.density = 0.80; % gostota celic
+    p.size_polje = size_p; % size of the space equals [size x size]
+    p.density = density; % gostota celic
 
 
     % simulation parameters 
@@ -100,9 +100,11 @@ function y = params_as_func(par, perorampl)
 
     % pridobimo še popreèja za vse celice:
     rezultat_povpreceno_cez_vse_celice =  [ mean(zacetkiOSCvec) mean(povpAplitudOSCvec) mean(povpPeriodOSCvec) ];
+   
+    fprintf('rezultai so: zacOsc=%f, povpAmpl=%f, povprPer=%f |===================\n', rezultat_povpreceno_cez_vse_celice(1),rezultat_povpreceno_cez_vse_celice(2), rezultat_povpreceno_cez_vse_celice(3));
     if(perorampl == 0)
         %vrnem periodo
-        y = -rezultat_povpreceno_cez_vse_celice(3);
+        y = rezultat_povpreceno_cez_vse_celice(3);
     else
         % vrnem negirano amplitudo
         y = -rezultat_povpreceno_cez_vse_celice(2);

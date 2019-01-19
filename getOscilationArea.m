@@ -18,8 +18,9 @@ function [start_oscilacije, povprecje_amplitud_oos, povprecje_period_oos] = getO
     [doline_val, doline_idx]= najdidoline(DATA,0);
     if( length(peaks_val) <= 0 || length(doline_val) <= 0)
         start_oscilacije = length(DATA_RAW);
-        povprecje_amplitud_oos = 0;
+        povprecje_amplitud_oos = -1;
         povprecje_period_oos = length(DATA_RAW);
+        return;
     end
      minlen = min(length(peaks_idx), length(doline_idx));
    

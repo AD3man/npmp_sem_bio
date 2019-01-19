@@ -64,7 +64,7 @@ function  [A_full, TT] = repressilator_S_PDE_as_func(naloziCelice,shraniCelice, 
         tmp_cel = load(poz_cel_filename);
         CELLS = tmp_cel.CELLS;
         cell_idx = tmp_cel.cell_idx;
-        fprintf('Celice nalozene\n');
+        %fprintf('Celice nalozene\n');
     else
         CELLS = zeros(size_polje,size_polje);
         cell_idx = zeros(1,n_cells);
@@ -77,11 +77,11 @@ function  [A_full, TT] = repressilator_S_PDE_as_func(naloziCelice,shraniCelice, 
             cell_idx(i) = idx;
         end
         cell_idx = sort(cell_idx);
-        fprintf('Pozicije celic generirane\n');
+        %fprintf('Pozicije celic generirane\n');
         if(shrani_celice)
             % Za shranjevenje neke pozicije celic
             save(poz_cel_filename,'cell_idx', 'CELLS', '-v7.3' );
-            fprintf('Pozicije celic so shranjene \n');
+         %   fprintf('Pozicije celic so shranjene \n');
         end
     end
     
