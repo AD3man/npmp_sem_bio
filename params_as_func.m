@@ -106,7 +106,9 @@ function y = params_as_func(par, perorampl, size_p, density)
     end
     
     fprintf('rezultai so: zacOsc=%f, povpAmpl=%f, povprPer=%f |===================\n', rezultat_povpreceno_cez_vse_celice(1),rezultat_povpreceno_cez_vse_celice(2), rezultat_povpreceno_cez_vse_celice(3));
-    if(perorampl == 0)
+    if(perorampl == -1)
+        y=rezultat_povpreceno_cez_vse_celice;
+    elseif(perorampl == 0)
         %vrnem periodo
         y = rezultat_povpreceno_cez_vse_celice(3);
     elseif( perorampl == 1 )
